@@ -1,0 +1,27 @@
+{
+  "name": "XPS-10 Pro Mixer & Performance Manager",
+  "short_name": "XPS10 Editor",
+  "description": "Software profissional de controle de pistas, equalização e seleção de timbres para o Roland XPS-10 via Web MIDI API.",
+  "id": "./",
+  "scope": "./",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "landscape",
+  "background_color": "#e1e4e6",
+  "theme_color": "#007aff",
+  "icons": [
+    {
+      "src": "./icons/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-1024.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
