@@ -8,19 +8,6 @@
 <meta name="theme-color" content="#0056b3">
 <style>
 :root {
---bg-color: #aaaaaa;
---card-bg: #c5c5c5;
---primary: #0056b3;
---accent: #1e7e34;
---eq-color: #d35400;
---danger: #bd2130;
---text: #111111;
---text-muted: #444444;
---border: #888888;
---fader-track: #999999;
---input-bg: #e5e5e5;
-}
-body.aluminium-theme {
 --bg-color: #e1e4e6;
 --card-bg: #f5f7f8;
 --primary: #007aff;
@@ -780,11 +767,11 @@ function carregarCena() {
     });
   }
 
-  isDirty = false;
-
-  setTimeout(() => {
-    isLoadingScene = false;
-  }, 250);
+  isDirty = false; 
+setTimeout(() => { 
+    isLoadingScene = false; 
+    console.log("Cena carregada com sucesso e conexões MIDI estabilizadas.");
+}, 800); 
 }
 function deletarCena() {
 const key = document.getElementById("scene-select").value; if(!key) return alert("Selecione uma mixagem!");
