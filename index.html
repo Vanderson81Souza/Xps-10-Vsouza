@@ -1,3192 +1,813 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover, user-scalable=no">
- <title>XPS-10 Mixer Pro & Performance Manager</title>
- <meta name="mobile-web-app-capable" content="yes">
- <meta name="application-name" content="XPS10 Mixer">
- <meta name="theme-color" content="#007aff">
- <meta name="msapplication-TileColor" content="#007aff">
- <meta name="apple-mobile-web-app-capable" content="yes">
- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
- <meta name="apple-mobile-web-app-title" content="XPS10 Mixer">
- <link rel="manifest" href="./manifest.json">
- <link rel="apple-touch-icon" href="./icons/icon-1024.png">
- <script id="app-timbres-data" type="application/json">
-{
-  "bancos_xps10": [
-    {
-      "categoria": "Pianos Acústicos e Variações Principais",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 1,
-          "id": "Pf001",
-          "nome": "Pf001: 88StageGrand"
-        },
-        {
-          "pc": 2,
-          "id": "Pf002",
-          "nome": "Pf002: 88StgGrand 2"
-        },
-        {
-          "pc": 3,
-          "id": "Pf003",
-          "nome": "Pf003: 88StgGrand 3"
-        },
-        {
-          "pc": 4,
-          "id": "Pf004",
-          "nome": "Pf004: JUNO Piano 1"
-        },
-        {
-          "pc": 5,
-          "id": "Pf005",
-          "nome": "Pf005: Rich Grand 1"
-        },
-        {
-          "pc": 6,
-          "id": "Pf006",
-          "nome": "Pf006: Rich Grand 2"
-        },
-        {
-          "pc": 7,
-          "id": "Pf007",
-          "nome": "Pf007: Piano+Str 1"
-        },
-        {
-          "pc": 8,
-          "id": "Pf008",
-          "nome": "Pf008: Fairy Piano"
-        },
-        {
-          "pc": 9,
-          "id": "Pf009",
-          "nome": "Pf009: Pop Grand"
-        },
-        {
-          "pc": 10,
-          "id": "Pf010",
-          "nome": "Pf010: Stage Piano"
-        },
-        {
-          "pc": 11,
-          "id": "Pf011",
-          "nome": "Pf011: ConcertGrand"
-        },
-        {
-          "pc": 12,
-          "id": "Pf012",
-          "nome": "Pf012: Grand Piano"
-        },
-        {
-          "pc": 13,
-          "id": "Pf013",
-          "nome": "Pf013: Bright Piano"
-        },
-        {
-          "pc": 14,
-          "id": "Pf014",
-          "nome": "Pf014: Classy Piano"
-        },
-        {
-          "pc": 15,
-          "id": "Pf015",
-          "nome": "Pf015: Mid Piano"
-        },
-        {
-          "pc": 16,
-          "id": "Pf016",
-          "nome": "Pf016: MonalPiano 1"
-        },
-        {
-          "pc": 17,
-          "id": "Pf017",
-          "nome": "Pf017: MonalPiano 2"
-        },
-        {
-          "pc": 18,
-          "id": "Pf018",
-          "nome": "Pf018: JUNO Piano 2"
-        },
-        {
-          "pc": 19,
-          "id": "Pf019",
-          "nome": "Pf019: JUNO Piano 3"
-        },
-        {
-          "pc": 20,
-          "id": "Pf020",
-          "nome": "Pf020: Dance Piano"
-        },
-        {
-          "pc": 21,
-          "id": "Pf021",
-          "nome": "Pf021: Piano+Str 2"
-        },
-        {
-          "pc": 22,
-          "id": "Pf022",
-          "nome": "Pf022: Piano+Str 3"
-        },
-        {
-          "pc": 23,
-          "id": "Pf023",
-          "nome": "Pf023: Piano+Str 4"
-        },
-        {
-          "pc": 24,
-          "id": "Pf024",
-          "nome": "Pf024: Piano+Str 5"
-        },
-        {
-          "pc": 25,
-          "id": "Pf025",
-          "nome": "Pf025: Piano+Pad 1"
-        },
-        {
-          "pc": 26,
-          "id": "Pf026",
-          "nome": "Pf026: Piano+Pad 2"
-        },
-        {
-          "pc": 27,
-          "id": "Pf027",
-          "nome": "Pf027: Piano+Pad 3"
-        },
-        {
-          "pc": 28,
-          "id": "Pf028",
-          "nome": "Pf028: Magical Piano"
-        },
-        {
-          "pc": 29,
-          "id": "Pf029",
-          "nome": "Pf029: SA Piano 1"
-        },
-        {
-          "pc": 30,
-          "id": "Pf030",
-          "nome": "Pf030: SA Piano 2"
-        },
-        {
-          "pc": 31,
-          "id": "Pf031",
-          "nome": "Pf031: Honky-tonk"
-        }
-      ]
-    },
-    {
-      "categoria": "Pianos Elétricos Clássicos e Sintetizados",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 32,
-          "id": "Pf032",
-          "nome": "Pf032: Tine E.Piano"
-        },
-        {
-          "pc": 33,
-          "id": "Pf033",
-          "nome": "Pf033: Tine EP 2"
-        },
-        {
-          "pc": 34,
-          "id": "Pf034",
-          "nome": "Pf034: 1975 E.Piano"
-        },
-        {
-          "pc": 35,
-          "id": "Pf035",
-          "nome": "Pf035: Pure E.Piano"
-        },
-        {
-          "pc": 36,
-          "id": "Pf036",
-          "nome": "Pf036: Session EP"
-        },
-        {
-          "pc": 37,
-          "id": "Pf037",
-          "nome": "Pf037: Stage EP"
-        },
-        {
-          "pc": 38,
-          "id": "Pf038",
-          "nome": "Pf038: JUNO E.Piano"
-        },
-        {
-          "pc": 39,
-          "id": "Pf039",
-          "nome": "Pf039: 80s E.Piano"
-        },
-        {
-          "pc": 40,
-          "id": "Pf040",
-          "nome": "Pf040: Dyno EP 1"
-        },
-        {
-          "pc": 41,
-          "id": "Pf041",
-          "nome": "Pf041: Dyno EP 2"
-        },
-        {
-          "pc": 42,
-          "id": "Pf042",
-          "nome": "Pf042: Tremolo EP"
-        },
-        {
-          "pc": 43,
-          "id": "Pf043",
-          "nome": "Pf043: EP+Str"
-        },
-        {
-          "pc": 44,
-          "id": "Pf044",
-          "nome": "Pf044: FM E.Piano"
-        },
-        {
-          "pc": 45,
-          "id": "Pf045",
-          "nome": "Pf045: FM EP 2"
-        },
-        {
-          "pc": 46,
-          "id": "Pf046",
-          "nome": "Pf046: FM EP 3"
-        },
-        {
-          "pc": 47,
-          "id": "Pf047",
-          "nome": "Pf047: FM EP 4"
-        },
-        {
-          "pc": 48,
-          "id": "Pf048",
-          "nome": "Pf048: FM EP 5"
-        },
-        {
-          "pc": 49,
-          "id": "Pf049",
-          "nome": "Pf049: FM EP 6"
-        },
-        {
-          "pc": 50,
-          "id": "Pf050",
-          "nome": "Pf050: FM EP 7"
-        },
-        {
-          "pc": 51,
-          "id": "Pf051",
-          "nome": "Pf051: FM EP 8"
-        },
-        {
-          "pc": 52,
-          "id": "Pf052",
-          "nome": "Pf052: 80s FM EP"
-        },
-        {
-          "pc": 53,
-          "id": "Pf053",
-          "nome": "Pf053: Pop EP"
-        },
-        {
-          "pc": 54,
-          "id": "Pf054",
-          "nome": "Pf054: Cell EP"
-        },
-        {
-          "pc": 55,
-          "id": "Pf055",
-          "nome": "Pf055: Wurly"
-        },
-        {
-          "pc": 56,
-          "id": "Pf056",
-          "nome": "Pf056: Wurly 2"
-        },
-        {
-          "pc": 57,
-          "id": "Pf057",
-          "nome": "Pf057: Reed EP 1"
-        },
-        {
-          "pc": 58,
-          "id": "Pf058",
-          "nome": "Pf058: Reed EP 2"
-        },
-        {
-          "pc": 59,
-          "id": "Pf059",
-          "nome": "Pf059: Reed EP 3"
-        },
-        {
-          "pc": 60,
-          "id": "Pf060",
-          "nome": "Pf060: Reed EP 4"
-        },
-        {
-          "pc": 61,
-          "id": "Pf061",
-          "nome": "Pf061: SA EP"
-        },
-        {
-          "pc": 62,
-          "id": "Pf062",
-          "nome": "Pf062: Curly EP"
-        },
-        {
-          "pc": 63,
-          "id": "Pf063",
-          "nome": "Pf063: Phase EP 1"
-        },
-        {
-          "pc": 64,
-          "id": "Pf064",
-          "nome": "Pf064: Phase EP 2"
-        },
-        {
-          "pc": 65,
-          "id": "Pf065",
-          "nome": "Pf065: Phaser Wurly"
-        },
-        {
-          "pc": 66,
-          "id": "Pf066",
-          "nome": "Pf066: Retro EP"
-        },
-        {
-          "pc": 67,
-          "id": "Pf067",
-          "nome": "Pf067: Clav EP"
-        },
-        {
-          "pc": 68,
-          "id": "Pf068",
-          "nome": "Pf068: Synth EP 1"
-        },
-        {
-          "pc": 69,
-          "id": "Pf069",
-          "nome": "Pf069: Synth EP 2"
-        },
-        {
-          "pc": 70,
-          "id": "Pf070",
-          "nome": "Pf070: Synth EP 3"
-        },
-        {
-          "pc": 71,
-          "id": "Pf071",
-          "nome": "Pf071: Synth EP 4"
-        },
-        {
-          "pc": 72,
-          "id": "Pf072",
-          "nome": "Pf072: Synth EP 5"
-        },
-        {
-          "pc": 73,
-          "id": "Pf073",
-          "nome": "Pf073: Soft EP"
-        }
-      ]
-    },
-    {
-      "categoria": "Clavinetes, Mallets e Timbres Adicionais",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 74,
-          "id": "Pf074",
-          "nome": "Pf074: Clavi 1"
-        },
-        {
-          "pc": 75,
-          "id": "Pf075",
-          "nome": "Pf075: Clavi 2"
-        },
-        {
-          "pc": 76,
-          "id": "Pf076",
-          "nome": "Pf076: Clavi 3"
-        },
-        {
-          "pc": 77,
-          "id": "Pf077",
-          "nome": "Pf077: Clavi 4"
-        },
-        {
-          "pc": 78,
-          "id": "Pf078",
-          "nome": "Pf078: Clavi 5"
-        },
-        {
-          "pc": 79,
-          "id": "Pf079",
-          "nome": "Pf079: Phase Clavi"
-        },
-        {
-          "pc": 80,
-          "id": "Pf080",
-          "nome": "Pf080: Celesta"
-        },
-        {
-          "pc": 81,
-          "id": "Pf081",
-          "nome": "Pf081: Glockenspiel"
-        },
-        {
-          "pc": 82,
-          "id": "Pf082",
-          "nome": "Pf082: Music Box"
-        },
-        {
-          "pc": 83,
-          "id": "Pf083",
-          "nome": "Pf083: Vibraphone"
-        },
-        {
-          "pc": 84,
-          "id": "Pf084",
-          "nome": "Pf084: Vibraphone 2"
-        },
-        {
-          "pc": 85,
-          "id": "Pf085",
-          "nome": "Pf085: Marimba"
-        },
-        {
-          "pc": 86,
-          "id": "Pf086",
-          "nome": "Pf086: Marimba 2"
-        },
-        {
-          "pc": 87,
-          "id": "Pf087",
-          "nome": "Pf087: Xylophone"
-        },
-        {
-          "pc": 88,
-          "id": "Pf088",
-          "nome": "Pf088: TubularBells"
-        },
-        {
-          "pc": 89,
-          "id": "Pf089",
-          "nome": "Pf089: Church Bell"
-        },
-        {
-          "pc": 90,
-          "id": "Pf090",
-          "nome": "Pf090: Carillon"
-        },
-        {
-          "pc": 91,
-          "id": "Pf091",
-          "nome": "Pf091: Santur"
-        },
-        {
-          "pc": 92,
-          "id": "Pf092",
-          "nome": "Pf092: CIMBALOM"
-        },
-        {
-          "pc": 93,
-          "id": "Pf093",
-          "nome": "Pf093: Log Drum"
-        },
-        {
-          "pc": 94,
-          "id": "Pf094",
-          "nome": "Pf094: Steel Drums"
-        },
-        {
-          "pc": 95,
-          "id": "Pf095",
-          "nome": "Pf095: Steel Drum 2"
-        }
-      ]
-    },
-    {
-      "categoria": "Pianos da Lista Geral GM/GM2",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 96,
-          "id": "Pf096",
-          "nome": "Pf096: Piano 1"
-        },
-        {
-          "pc": 97,
-          "id": "Pf097",
-          "nome": "Pf097: Piano 1w"
-        },
-        {
-          "pc": 98,
-          "id": "Pf098",
-          "nome": "Pf098: Piano 1d"
-        },
-        {
-          "pc": 99,
-          "id": "Pf099",
-          "nome": "Pf099: Piano 2"
-        },
-        {
-          "pc": 100,
-          "id": "Pf100",
-          "nome": "Pf100: Piano 2w"
-        },
-        {
-          "pc": 101,
-          "id": "Pf101",
-          "nome": "Pf101: Piano 3"
-        },
-        {
-          "pc": 102,
-          "id": "Pf102",
-          "nome": "Pf102: Piano 3w"
-        },
-        {
-          "pc": 103,
-          "id": "Pf103",
-          "nome": "Pf103: Honky-tonk"
-        },
-        {
-          "pc": 104,
-          "id": "Pf104",
-          "nome": "Pf104: Honky-tonk w"
-        },
-        {
-          "pc": 105,
-          "id": "Pf105",
-          "nome": "Pf105: E.Piano 1"
-        },
-        {
-          "pc": 106,
-          "id": "Pf106",
-          "nome": "Pf106: Detuned EP 1"
-        },
-        {
-          "pc": 107,
-          "id": "Pf107",
-          "nome": "Pf107: E.Piano 1v"
-        },
-        {
-          "pc": 108,
-          "id": "Pf108",
-          "nome": "Pf108: 60s E.Piano"
-        },
-        {
-          "pc": 109,
-          "id": "Pf109",
-          "nome": "Pf109: E.Piano 2"
-        },
-        {
-          "pc": 110,
-          "id": "Pf110",
-          "nome": "Pf110: Detuned EP 2"
-        },
-        {
-          "pc": 111,
-          "id": "Pf111",
-          "nome": "Pf111: E.Piano 2v"
-        },
-        {
-          "pc": 112,
-          "id": "Pf112",
-          "nome": "Pf112: Harpsichord"
-        },
-        {
-          "pc": 113,
-          "id": "Pf113",
-          "nome": "Pf113: Coupled Hps"
-        }
-      ]
-    },
-    {
-      "categoria": "Orquestras de Cordas Completas",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 1,
-          "id": "St001",
-          "nome": "St001: Stage Strings"
-        },
-        {
-          "pc": 2,
-          "id": "St002",
-          "nome": "St002: Stage Str 2"
-        },
-        {
-          "pc": 3,
-          "id": "St003",
-          "nome": "St003: Session Str"
-        },
-        {
-          "pc": 4,
-          "id": "St004",
-          "nome": "St004: Rich Strings"
-        },
-        {
-          "pc": 5,
-          "id": "St005",
-          "nome": "St005: OrchestraStr"
-        },
-        {
-          "pc": 6,
-          "id": "St006",
-          "nome": "St006: Hybrid Str"
-        },
-        {
-          "pc": 7,
-          "id": "St007",
-          "nome": "St007: Full Strings"
-        },
-        {
-          "pc": 8,
-          "id": "St008",
-          "nome": "St008: Studio Strings"
-        },
-        {
-          "pc": 9,
-          "id": "St009",
-          "nome": "St009: Bright Strings"
-        },
-        {
-          "pc": 10,
-          "id": "St010",
-          "nome": "St010: Marcato Str"
-        },
-        {
-          "pc": 11,
-          "id": "St011",
-          "nome": "St011: Slow Strings"
-        },
-        {
-          "pc": 12,
-          "id": "St012",
-          "nome": "St012: Slow Str 2"
-        },
-        {
-          "pc": 13,
-          "id": "St013",
-          "nome": "St013: Oct Strings"
-        },
-        {
-          "pc": 14,
-          "id": "St014",
-          "nome": "St014: Oct Marcato"
-        },
-        {
-          "pc": 15,
-          "id": "St015",
-          "nome": "St015: Chamber Str"
-        },
-        {
-          "pc": 16,
-          "id": "St016",
-          "nome": "St016: Section Str"
-        },
-        {
-          "pc": 17,
-          "id": "St017",
-          "nome": "St017: Small Strings"
-        },
-        {
-          "pc": 18,
-          "id": "St018",
-          "nome": "St018: Warm Strings"
-        },
-        {
-          "pc": 19,
-          "id": "St019",
-          "nome": "St019: Hall Strings"
-        },
-        {
-          "pc": 20,
-          "id": "St020",
-          "nome": "St020: SymphonicStr"
-        },
-        {
-          "pc": 21,
-          "id": "St021",
-          "nome": "St021: Concert Str"
-        },
-        {
-          "pc": 22,
-          "id": "St022",
-          "nome": "St022: Tremolo Str"
-        },
-        {
-          "pc": 23,
-          "id": "St023",
-          "nome": "St023: PizzicatoStr"
-        },
-        {
-          "pc": 24,
-          "id": "St024",
-          "nome": "St024: StaccatoStr"
-        }
-      ]
-    },
-    {
-      "categoria": "Instrumentos Solo, Harpas e Hits",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 25,
-          "id": "St025",
-          "nome": "St025: Violin 1"
-        },
-        {
-          "pc": 26,
-          "id": "St026",
-          "nome": "St026: Violin 2"
-        },
-        {
-          "pc": 27,
-          "id": "St027",
-          "nome": "St027: Slow Violin"
-        },
-        {
-          "pc": 28,
-          "id": "St028",
-          "nome": "St028: Viola"
-        },
-        {
-          "pc": 29,
-          "id": "St029",
-          "nome": "St029: Cello"
-        },
-        {
-          "pc": 30,
-          "id": "St030",
-          "nome": "St030: Contrabass"
-        },
-        {
-          "pc": 31,
-          "id": "St031",
-          "nome": "St031: Harp 1"
-        },
-        {
-          "pc": 32,
-          "id": "St032",
-          "nome": "St032: Harp 2"
-        },
-        {
-          "pc": 33,
-          "id": "St033",
-          "nome": "St033: Yangquin"
-        },
-        {
-          "pc": 34,
-          "id": "St034",
-          "nome": "St034: Strings 1 (GM)"
-        },
-        {
-          "pc": 35,
-          "id": "St035",
-          "nome": "St035: Strings 2 (GM)"
-        },
-        {
-          "pc": 36,
-          "id": "St036",
-          "nome": "St036: Slow Strings (GM)"
-        },
-        {
-          "pc": 37,
-          "id": "St037",
-          "nome": "St037: Marcato (GM)"
-        },
-        {
-          "pc": 38,
-          "id": "St038",
-          "nome": "St038: Violin (GM)"
-        },
-        {
-          "pc": 39,
-          "id": "St039",
-          "nome": "St039: Slow Violin (GM)"
-        },
-        {
-          "pc": 40,
-          "id": "St040",
-          "nome": "St040: Viola (GM)"
-        },
-        {
-          "pc": 41,
-          "id": "St041",
-          "nome": "St041: Cello (GM)"
-        },
-        {
-          "pc": 42,
-          "id": "St042",
-          "nome": "St042: Contrabass (GM)"
-        },
-        {
-          "pc": 43,
-          "id": "St043",
-          "nome": "St043: Tremolo Str (GM)"
-        },
-        {
-          "pc": 44,
-          "id": "St044",
-          "nome": "St044: Pizzicato (GM)"
-        },
-        {
-          "pc": 45,
-          "id": "St045",
-          "nome": "St045: Harp (GM)"
-        },
-        {
-          "pc": 46,
-          "id": "St046",
-          "nome": "St046: Timpani (GM)"
-        },
-        {
-          "pc": 47,
-          "id": "St047",
-          "nome": "St047: OrchestraHit"
-        },
-        {
-          "pc": 48,
-          "id": "St048",
-          "nome": "St048: Bass Hit"
-        },
-        {
-          "pc": 49,
-          "id": "St049",
-          "nome": "St049: 6th Hit"
-        },
-        {
-          "pc": 50,
-          "id": "St050",
-          "nome": "St050: Euro Hit"
-        },
-        {
-          "pc": 51,
-          "id": "St051",
-          "nome": "St051: Philly Hit"
-        },
-        {
-          "pc": 52,
-          "id": "St052",
-          "nome": "St052: Impact Hit"
-        }
-      ]
-    },
-    {
-      "categoria": "Órgãos Eletromecânicos, Jazz e Rock",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 53,
-          "id": "Or001",
-          "nome": "Or001: B3 Organ 1"
-        },
-        {
-          "pc": 54,
-          "id": "Or002",
-          "nome": "Or002: B3 Organ 2"
-        },
-        {
-          "pc": 55,
-          "id": "Or003",
-          "nome": "Or003: B3 Organ 3"
-        },
-        {
-          "pc": 56,
-          "id": "Or004",
-          "nome": "Or004: Jazz Organ 1"
-        },
-        {
-          "pc": 57,
-          "id": "Or005",
-          "nome": "Or005: Jazz Organ 2"
-        },
-        {
-          "pc": 58,
-          "id": "Or006",
-          "nome": "Or006: Rock Organ 1"
-        },
-        {
-          "pc": 59,
-          "id": "Or007",
-          "nome": "Or007: Rock Organ 2"
-        },
-        {
-          "pc": 60,
-          "id": "Or008",
-          "nome": "Or008: Gospel Organ"
-        },
-        {
-          "pc": 61,
-          "id": "Or009",
-          "nome": "Or009: Drawbar Org 1"
-        },
-        {
-          "pc": 62,
-          "id": "Or010",
-          "nome": "Or010: Drawbar Org 2"
-        },
-        {
-          "pc": 63,
-          "id": "Or011",
-          "nome": "Or011: Perc Organ 1"
-        },
-        {
-          "pc": 64,
-          "id": "Or012",
-          "nome": "Or012: Perc Organ 2"
-        },
-        {
-          "pc": 65,
-          "id": "Or013",
-          "nome": "Or013: Full Organ"
-        },
-        {
-          "pc": 66,
-          "id": "Or014",
-          "nome": "Or014: Clean Organ"
-        },
-        {
-          "pc": 67,
-          "id": "Or015",
-          "nome": "Or015: Mellow Organ"
-        },
-        {
-          "pc": 68,
-          "id": "Or016",
-          "nome": "Or016: Light Organ"
-        },
-        {
-          "pc": 69,
-          "id": "Or017",
-          "nome": "Or017: Rotary Organ"
-        },
-        {
-          "pc": 70,
-          "id": "Or018",
-          "nome": "Or018: Dist Organ"
-        },
-        {
-          "pc": 71,
-          "id": "Or019",
-          "nome": "Or019: Purple Organ"
-        },
-        {
-          "pc": 72,
-          "id": "Or020",
-          "nome": "Or020: 60s Organ"
-        },
-        {
-          "pc": 73,
-          "id": "Or021",
-          "nome": "Or021: TransistOrg"
-        }
-      ]
-    },
-    {
-      "categoria": "Órgãos de Tubo, Igreja e Acordeon",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 74,
-          "id": "Or022",
-          "nome": "Or022: Church Organ1"
-        },
-        {
-          "pc": 75,
-          "id": "Or023",
-          "nome": "Or023: Church Organ2"
-        },
-        {
-          "pc": 76,
-          "id": "Or024",
-          "nome": "Or024: Chapel Organ"
-        },
-        {
-          "pc": 77,
-          "id": "Or025",
-          "nome": "Or025: Reed Organ"
-        },
-        {
-          "pc": 78,
-          "id": "Or026",
-          "nome": "Or026: Puff Organ"
-        },
-        {
-          "pc": 79,
-          "id": "Or027",
-          "nome": "Or027: Drawbar Org (GM)"
-        },
-        {
-          "pc": 80,
-          "id": "Or028",
-          "nome": "Or028: Detuned Org1 (GM)"
-        },
-        {
-          "pc": 81,
-          "id": "Or029",
-          "nome": "Or029: 60s Organ (GM)"
-        },
-        {
-          "pc": 82,
-          "id": "Or030",
-          "nome": "Or030: Perc Organ (GM)"
-        },
-        {
-          "pc": 83,
-          "id": "Or031",
-          "nome": "Or031: Detuned Org2 (GM)"
-        },
-        {
-          "pc": 84,
-          "id": "Or032",
-          "nome": "Or032: Rock Organ (GM)"
-        },
-        {
-          "pc": 85,
-          "id": "Or033",
-          "nome": "Or033: Church Org 1 (GM)"
-        },
-        {
-          "pc": 86,
-          "id": "Or034",
-          "nome": "Or034: Church Org 2 (GM)"
-        },
-        {
-          "pc": 87,
-          "id": "Or035",
-          "nome": "Or035: Reed Organ (GM)"
-        },
-        {
-          "pc": 88,
-          "id": "Or036",
-          "nome": "Or036: Puff Organ (GM)"
-        },
-        {
-          "pc": 89,
-          "id": "Or037",
-          "nome": "Or037: Accordion (GM)"
-        }
-      ]
-    },
-    {
-      "categoria": "Leads Clássicos, Ondas Saw e Square",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 90,
-          "id": "Sy001",
-          "nome": "Sy001: GR Lead"
-        },
-        {
-          "pc": 91,
-          "id": "Sy002",
-          "nome": "Sy002: Saw Lead 1"
-        },
-        {
-          "pc": 92,
-          "id": "Sy003",
-          "nome": "Sy003: Saw Lead 2"
-        },
-        {
-          "pc": 93,
-          "id": "Sy004",
-          "nome": "Sy004: Square Lead1"
-        },
-        {
-          "pc": 94,
-          "id": "Sy005",
-          "nome": "Sy005: Square Lead2"
-        },
-        {
-          "pc": 95,
-          "id": "Sy006",
-          "nome": "Sy006: Sine Solo"
-        },
-        {
-          "pc": 96,
-          "id": "Sy007",
-          "nome": "Sy007: Pure Lead"
-        },
-        {
-          "pc": 97,
-          "id": "Sy008",
-          "nome": "Sy008: JUNO Lead 1"
-        },
-        {
-          "pc": 98,
-          "id": "Sy009",
-          "nome": "Sy009: JUNO Lead 2"
-        },
-        {
-          "pc": 99,
-          "id": "Sy010",
-          "nome": "Sy010: Vintage Lead"
-        },
-        {
-          "pc": 100,
-          "id": "Sy011",
-          "nome": "Sy011: Retro Solo"
-        },
-        {
-          "pc": 101,
-          "id": "Sy012",
-          "nome": "Sy012: SH-1000 Lead"
-        },
-        {
-          "pc": 102,
-          "id": "Sy013",
-          "nome": "Sy013: Pro-5 Lead"
-        },
-        {
-          "pc": 103,
-          "id": "Sy014",
-          "nome": "Sy014: Modular Lead"
-        },
-        {
-          "pc": 104,
-          "id": "Sy015",
-          "nome": "Sy015: Analog Lead"
-        },
-        {
-          "pc": 105,
-          "id": "Sy016",
-          "nome": "Sy016: Fat Saw Lead"
-        },
-        {
-          "pc": 106,
-          "id": "Sy017",
-          "nome": "Sy017: Dual Saws"
-        },
-        {
-          "pc": 107,
-          "id": "Sy018",
-          "nome": "Sy018: Triple Saws"
-        },
-        {
-          "pc": 108,
-          "id": "Sy019",
-          "nome": "Sy019: Sync Lead 1"
-        },
-        {
-          "pc": 109,
-          "id": "Sy020",
-          "nome": "Sy020: Sync Lead 2"
-        },
-        {
-          "pc": 110,
-          "id": "Sy021",
-          "nome": "Sy021: Dist Lead"
-        },
-        {
-          "pc": 111,
-          "id": "Sy022",
-          "nome": "Sy022: OverdriveLead"
-        },
-        {
-          "pc": 112,
-          "id": "Sy023",
-          "nome": "Sy023: Guitar-ish"
-        },
-        {
-          "pc": 113,
-          "id": "Sy024",
-          "nome": "Sy024: Whine Lead"
-        },
-        {
-          "pc": 114,
-          "id": "Sy025",
-          "nome": "Sy025: PortamentoSaw"
-        },
-        {
-          "pc": 115,
-          "id": "Sy026",
-          "nome": "Sy026: Poly Lead"
-        },
-        {
-          "pc": 116,
-          "id": "Sy027",
-          "nome": "Sy027: Pop Lead"
-        },
-        {
-          "pc": 117,
-          "id": "Sy028",
-          "nome": "Sy028: Dance Lead"
-        },
-        {
-          "pc": 118,
-          "id": "Sy029",
-          "nome": "Sy029: Techno Lead"
-        },
-        {
-          "pc": 119,
-          "id": "Sy030",
-          "nome": "Sy030: Trance Solo"
-        },
-        {
-          "pc": 120,
-          "id": "Sy031",
-          "nome": "Sy031: Euro Lead"
-        },
-        {
-          "pc": 121,
-          "id": "Sy032",
-          "nome": "Sy032: Rave Lead"
-        },
-        {
-          "pc": 122,
-          "id": "Sy033",
-          "nome": "Sy033: Sharp Lead"
-        },
-        {
-          "pc": 123,
-          "id": "Sy034",
-          "nome": "Sy034: Piercing Lead"
-        },
-        {
-          "pc": 124,
-          "id": "Sy035",
-          "nome": "Sy035: Cutting Lead"
-        }
-      ]
-    },
-    {
-      "categoria": "Solo Vintage, Efeitos e GM Leads",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 125,
-          "id": "Sy036",
-          "nome": "Sy036: Blaster Lead"
-        },
-        {
-          "pc": 126,
-          "id": "Sy037",
-          "nome": "Sy037: Laser Lead"
-        },
-        {
-          "pc": 127,
-          "id": "Sy038",
-          "nome": "Sy038: Space Lead"
-        },
-        {
-          "pc": 128,
-          "id": "Sy039",
-          "nome": "Sy039: Cosmic Solo"
-        },
-        {
-          "pc": 1,
-          "id": "Sy040",
-          "nome": "Sy040: Star Lead"
-        },
-        {
-          "pc": 2,
-          "id": "Sy041",
-          "nome": "Sy041: Dream Lead"
-        },
-        {
-          "pc": 3,
-          "id": "Sy042",
-          "nome": "Sy042: Soft Lead"
-        },
-        {
-          "pc": 4,
-          "id": "Sy043",
-          "nome": "Sy043: Mellow Lead"
-        },
-        {
-          "pc": 5,
-          "id": "Sy044",
-          "nome": "Sy044: Smooth Solo"
-        },
-        {
-          "pc": 6,
-          "id": "Sy045",
-          "nome": "Sy045: Theremin"
-        },
-        {
-          "pc": 7,
-          "id": "Sy046",
-          "nome": "Sy046: Sine Lead (GM)"
-        },
-        {
-          "pc": 8,
-          "id": "Sy047",
-          "nome": "Sy047: Saw Lead (GM)"
-        },
-        {
-          "pc": 9,
-          "id": "Sy048",
-          "nome": "Sy048: Doctor Solo (GM)"
-        },
-        {
-          "pc": 10,
-          "id": "Sy049",
-          "nome": "Sy049: Natural Lead (GM)"
-        },
-        {
-          "pc": 11,
-          "id": "Sy050",
-          "nome": "Sy050: SequencedSaw (GM)"
-        },
-        {
-          "pc": 12,
-          "id": "Sy051",
-          "nome": "Sy051: Square Lead (GM)"
-        },
-        {
-          "pc": 13,
-          "id": "Sy052",
-          "nome": "Sy052: Sine Lead 2 (GM)"
-        },
-        {
-          "pc": 14,
-          "id": "Sy053",
-          "nome": "Sy053: Triangle Lead (GM)"
-        },
-        {
-          "pc": 15,
-          "id": "Sy054",
-          "nome": "Sy054: Calliope (GM)"
-        },
-        {
-          "pc": 16,
-          "id": "Sy055",
-          "nome": "Sy055: Chiffer Lead (GM)"
-        },
-        {
-          "pc": 17,
-          "id": "Sy056",
-          "nome": "Sy056: Charang (GM)"
-        },
-        {
-          "pc": 18,
-          "id": "Sy057",
-          "nome": "Sy057: Wire Lead (GM)"
-        },
-        {
-          "pc": 19,
-          "id": "Sy058",
-          "nome": "Sy059: Solo Vox (GM)"
-        },
-        {
-          "pc": 20,
-          "id": "Sy059",
-          "nome": "Sy060: 5th Saw Wave (GM)"
-        },
-        {
-          "pc": 21,
-          "id": "Sy060",
-          "nome": "Sy061: Bass & Lead (GM)"
-        },
-        {
-          "pc": 22,
-          "id": "Sy061",
-          "nome": "Sy062: Delayed Saw (GM)"
-        },
-        {
-          "pc": 23,
-          "id": "Sy062",
-          "nome": "Sy063: Fantasy (GM)"
-        },
-        {
-          "pc": 24,
-          "id": "Sy063",
-          "nome": "Sy064: Harmo Rain (GM)"
-        },
-        {
-          "pc": 25,
-          "id": "Sy064",
-          "nome": "Sy065: Sound Track (GM)"
-        },
-        {
-          "pc": 26,
-          "id": "Sy065",
-          "nome": "Sy066: Crystal (GM)"
-        }
-      ]
-    },
-    {
-      "categoria": "Pads e Ambiências Analógicas/Digitais",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 27,
-          "id": "Sy380",
-          "nome": "Sy380: SaturnHolida"
-        },
-        {
-          "pc": 28,
-          "id": "Sy381",
-          "nome": "Sy381: Neuro-Drone"
-        },
-        {
-          "pc": 29,
-          "id": "Sy382",
-          "nome": "Sy382: In The Pass"
-        },
-        {
-          "pc": 30,
-          "id": "Sy383",
-          "nome": "Sy383: Polar Night"
-        },
-        {
-          "pc": 31,
-          "id": "Sy384",
-          "nome": "Sy384: Voyager"
-        },
-        {
-          "pc": 32,
-          "id": "Sy385",
-          "nome": "Sy385: Stringship"
-        },
-        {
-          "pc": 33,
-          "id": "Sy386",
-          "nome": "Sy386: DarknessSide"
-        },
-        {
-          "pc": 34,
-          "id": "Sy387",
-          "nome": "Sy387: Fat Stacks"
-        },
-        {
-          "pc": 35,
-          "id": "Sy388",
-          "nome": "Sy388: Strings R Us"
-        },
-        {
-          "pc": 36,
-          "id": "Sy389",
-          "nome": "Sy389: Electric Pad"
-        },
-        {
-          "pc": 37,
-          "id": "Sy390",
-          "nome": "Sy390: Neo RS-202"
-        },
-        {
-          "pc": 38,
-          "id": "Sy391",
-          "nome": "Sy391: OB Rezo Pad"
-        },
-        {
-          "pc": 39,
-          "id": "Sy392",
-          "nome": "Sy392: Synthi Ens"
-        },
-        {
-          "pc": 40,
-          "id": "Sy393",
-          "nome": "Sy393: Giant Sweep"
-        },
-        {
-          "pc": 41,
-          "id": "Sy394",
-          "nome": "Sy394: Mod Dare"
-        },
-        {
-          "pc": 42,
-          "id": "Sy395",
-          "nome": "Sy395: Cell Space"
-        },
-        {
-          "pc": 43,
-          "id": "Sy396",
-          "nome": "Sy396: Digi-Swell"
-        },
-        {
-          "pc": 44,
-          "id": "Sy397",
-          "nome": "Sy397: New Year Day"
-        },
-        {
-          "pc": 45,
-          "id": "Sy398",
-          "nome": "Sy398: Polar Morn"
-        },
-        {
-          "pc": 46,
-          "id": "Sy399",
-          "nome": "Sy399: Cosmic Waves"
-        },
-        {
-          "pc": 47,
-          "id": "Sy400",
-          "nome": "Sy400: Ocean Pad"
-        },
-        {
-          "pc": 48,
-          "id": "Sy401",
-          "nome": "Sy401: Preach Pad"
-        },
-        {
-          "pc": 49,
-          "id": "Sy402",
-          "nome": "Sy402: Soft Pad"
-        },
-        {
-          "pc": 50,
-          "id": "Sy403",
-          "nome": "Sy403: Warm Pad"
-        },
-        {
-          "pc": 51,
-          "id": "Sy404",
-          "nome": "Sy404: Sine Pad"
-        },
-        {
-          "pc": 52,
-          "id": "Sy405",
-          "nome": "Sy405: Reverse Pad"
-        },
-        {
-          "pc": 53,
-          "id": "Sy406",
-          "nome": "Sy406: Sweep Pad"
-        },
-        {
-          "pc": 54,
-          "id": "Sy407",
-          "nome": "Sy407: Soft Pad 2 (Worship Classic)"
-        },
-        {
-          "pc": 55,
-          "id": "Sy408",
-          "nome": "Sy408: Silk Pad"
-        },
-        {
-          "pc": 56,
-          "id": "Sy409",
-          "nome": "Sy409: Phase Pad"
-        },
-        {
-          "pc": 57,
-          "id": "Sy410",
-          "nome": "Sy410: JP Strings 1 (Roland JP-8000)"
-        },
-        {
-          "pc": 58,
-          "id": "Sy411",
-          "nome": "Sy411: JP Strings 2"
-        },
-        {
-          "pc": 59,
-          "id": "Sy412",
-          "nome": "Sy412: JUNO Strings (Vintage Analog)"
-        },
-        {
-          "pc": 60,
-          "id": "Sy413",
-          "nome": "Sy413: 80s Strings"
-        },
-        {
-          "pc": 61,
-          "id": "Sy414",
-          "nome": "Sy414: OB Strings"
-        },
-        {
-          "pc": 62,
-          "id": "Sy415",
-          "nome": "Sy415: VP-330 Choir"
-        },
-        {
-          "pc": 63,
-          "id": "Sy416",
-          "nome": "Sy416: Euro Waves"
-        },
-        {
-          "pc": 64,
-          "id": "Sy417",
-          "nome": "Sy417: Heaven Pad"
-        },
-        {
-          "pc": 65,
-          "id": "Sy418",
-          "nome": "Sy418: Atmosphere"
-        },
-        {
-          "pc": 66,
-          "id": "Sy419",
-          "nome": "Sy419: Paradise Pad"
-        },
-        {
-          "pc": 67,
-          "id": "Sy420",
-          "nome": "Sy420: Spatial Pad"
-        }
-      ]
-    },
-    {
-      "categoria": "Texturas de Brilho, Vox e Synth-Choirs",
-      "msb": 85,
-      "lsb": 0,
-      "timbres": [
-        {
-          "pc": 68,
-          "id": "Sy421",
-          "nome": "Sy421: Dreamy Pad"
-        },
-        {
-          "pc": 69,
-          "id": "Sy422",
-          "nome": "Sy422: Stardust Pad"
-        },
-        {
-          "pc": 70,
-          "id": "Sy423",
-          "nome": "Sy423: Bell Pad"
-        },
-        {
-          "pc": 71,
-          "id": "Sy424",
-          "nome": "Sy424: Fantasia (D-50 Stack)"
-        },
-        {
-          "pc": 72,
-          "id": "Sy425",
-          "nome": "Sy425: Ice Rain"
-        },
-        {
-          "pc": 73,
-          "id": "Sy426",
-          "nome": "Sy426: Soundtrack Pad"
-        },
-        {
-          "pc": 74,
-          "id": "Sy427",
-          "nome": "Sy427: Crystal Pad"
-        },
-        {
-          "pc": 75,
-          "id": "Sy428",
-          "nome": "Sy428: Syn Vox 1"
-        },
-        {
-          "pc": 76,
-          "id": "Sy429",
-          "nome": "Sy429: Syn Vox 2"
-        },
-        {
-          "pc": 77,
-          "id": "Sy430",
-          "nome": "Sy430: Vox Pad"
-        },
-        {
-          "pc": 78,
-          "id": "Sy431",
-          "nome": "Sy431: Cyber Choir"
-        },
-        {
-          "pc": 79,
-          "id": "Sy432",
-          "nome": "Sy432: Boy Choir"
-        },
-        {
-          "pc": 80,
-          "id": "Sy433",
-          "nome": "Sy433: Film Choir"
-        },
-        {
-          "pc": 81,
-          "id": "Sy434",
-          "nome": "Sy434: Mellotron Vox"
-        },
-        {
-          "pc": 82,
-          "id": "Sy435",
-          "nome": "Sy435: Vocoder Pad"
-        },
-        {
-          "pc": 83,
-          "id": "Sy436",
-          "nome": "Sy436: Space Echo Pad"
-        },
-        {
-          "pc": 84,
-          "id": "Sy437",
-          "nome": "Sy437: Trance Waves"
-        },
-        {
-          "pc": 85,
-          "id": "Sy438",
-          "nome": "Sy438: Pulsing Pad"
-        },
-        {
-          "pc": 86,
-          "id": "Sy439",
-          "nome": "Sy439: Sweep Sweep"
-        },
-        {
-          "pc": 87,
-          "id": "Sy440",
-          "nome": "Sy440: Reso Pad"
-        },
-        {
-          "pc": 88,
-          "id": "Sy441",
-          "nome": "Sy441: Phaser Pad"
-        },
-        {
-          "pc": 89,
-          "id": "Sy442",
-          "nome": "Sy442: Flanger Pad"
-        },
-        {
-          "pc": 90,
-          "id": "Sy443",
-          "nome": "Sy443: Dark Pad"
-        },
-        {
-          "pc": 91,
-          "id": "Sy444",
-          "nome": "Sy444: Hollow Pad"
-        },
-        {
-          "pc": 92,
-          "id": "Sy445",
-          "nome": "Sy445: Metal Swell"
-        },
-        {
-          "pc": 93,
-          "id": "Sy446",
-          "nome": "Sy446: Tin Pad"
-        },
-        {
-          "pc": 94,
-          "id": "Sy447",
-          "nome": "Sy447: Dawn Pad"
-        },
-        {
-          "pc": 95,
-          "id": "Sy448",
-          "nome": "Sy448: Aurora Pad"
-        },
-        {
-          "pc": 96,
-          "id": "Sy449",
-          "nome": "Sy449: Mystic Pad"
-        },
-        {
-          "pc": 97,
-          "id": "Sy450",
-          "nome": "Sy450: Sacred Pad"
-        },
-        {
-          "pc": 98,
-          "id": "Sy451",
-          "nome": "Sy451: Angelic Pad"
-        },
-        {
-          "pc": 99,
-          "id": "Sy452",
-          "nome": "Sy452: Horizon Pad"
-        },
-        {
-          "pc": 100,
-          "id": "Sy453",
-          "nome": "Sy453: Twilight Pad"
-        },
-        {
-          "pc": 101,
-          "id": "Sy454",
-          "nome": "Sy454: Nebula Pad"
-        },
-        {
-          "pc": 102,
-          "id": "Sy455",
-          "nome": "Sy455: Galaxy Pad"
-        },
-        {
-          "pc": 103,
-          "id": "Sy456",
-          "nome": "Sy456: Eclipse Pad"
-        },
-        {
-          "pc": 104,
-          "id": "Sy457",
-          "nome": "Sy457: Solstice Pad"
-        },
-        {
-          "pc": 105,
-          "id": "Sy458",
-          "nome": "Sy458: Genesis Pad"
-        },
-        {
-          "pc": 106,
-          "id": "Sy459",
-          "nome": "Sy459: Evolution Pad"
-        },
-        {
-          "pc": 107,
-          "id": "Sy460",
-          "nome": "Sy460: Infinity Pad"
-        }
-      ]
-    }
-  ]
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>XPS-10 Pro Multi-Mixer & EQ</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0056b3">
+<style>
+:root {
+--bg-color: #aaaaaa;
+--card-bg: #c5c5c5;
+--primary: #0056b3;
+--accent: #1e7e34;
+--eq-color: #d35400;
+--danger: #bd2130;
+--text: #111111;
+--text-muted: #444444;
+--border: #888888;
+--fader-track: #999999;
+--input-bg: #e5e5e5;
 }
- </script>
- <style>
- /* ==========================================================================
- 1. VARIÁVEIS DE AMBIENTE E RESET (TEMA CLARO EXCLUSIVO - ALUMÍNIO)
- ========================================================================== */
- :root {
- --bg-color: #e1e4e6;
- --card-bg: #f5f7f8;
- --primary: #007aff;
- --accent: #34c759;
- --eq-color: #ff9500;
- --danger: #ff3b30;
- --text: #1c1c1e;
- --text-muted: #8e8e93;
- --border: #c7c7cc;
- --fader-track: #d1d1d6;
- --input-bg: #ffffff;
- --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
- --shadow-md: 0 4px 20px rgba(0,0,0,0.15);
- --transition-fast: 0.2s ease;
- }
- html, body {
- overflow: hidden;
- touch-action: none;
- height: 100vh;
- margin: 0;
- padding: 0;
- }
- body {
- font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
- background-color: var(--bg-color);
- color: var(--text);
- padding: 8px;
- display: flex;
- flex-direction: column;
- box-sizing: border-box;
- user-select: none;
- }
- /* ==========================================================================
- 2. COMPONENTES DE LAYOUT E CABEÇALHO
- ========================================================================== */
- header {
- margin-bottom: 6px;
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex-wrap: wrap;
- gap: 8px;
- background: linear-gradient(180deg, #ffffff, #e5e5e5);
- padding: 6px 12px;
- border-radius: 6px;
- border: 1px solid var(--border);
- box-shadow: var(--shadow-sm);
- }
- .header-left {
- display: flex;
- align-items: center;
- gap: 12px;
- }
- h1 { 
- margin: 0; 
- font-size: 1.1rem; 
- font-weight: 700; 
- letter-spacing: -0.3px; 
- color: #222; 
- }
- .midi-status-container {
- display: flex;
- align-items: center;
- gap: 6px;
- }
- #status-bar {
- padding: 3px 10px;
- border-radius: 4px;
- font-size: 0.75rem;
- font-weight: bold;
- background-color: #eedddd;
- color: var(--danger);
- border: 1px solid #cc9999;
- }
- #status-bar.connected {
- background-color: #ddeedd;
- color: var(--accent);
- border: 1px solid #99cc99;
- }
- .midi-led {
- width: 10px;
- height: 10px;
- border-radius: 50%;
- background-color: #555;
- border: 1px solid #333;
- transition: background-color 0.05s ease;
- }
- .midi-led.blink {
- background-color: #30d158;
- box-shadow: 0 0 8px #30d158;
- }
- /* ==========================================================================
- 3. BOTÕES E CONTROLES (PADRÃO CRUD / AÇÕES)
- ========================================================================== */
- .crud-container {
- display: flex;
- align-items: center;
- gap: 6px;
- }
- .crud-container select {
- background-color: var(--input-bg);
- color: var(--text);
- border: 1px solid var(--border);
- padding: 5px 8px;
- border-radius: 4px;
- font-size: 0.75rem;
- font-weight: bold;
- outline: none;
- height: 28px;
- box-sizing: border-box;
- }
- .crud-btn {
- padding: 5px 12px;
- font-size: 0.75rem;
- font-weight: bold;
- border: 1px solid #777;
- border-radius: 4px;
- cursor: pointer;
- color: #fff;
- background: linear-gradient(180deg, #666, #444);
- box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.2);
- height: 28px;
- box-sizing: border-box;
- }
- .crud-btn:active { background: #333; }
- .btn-save { background: linear-gradient(180deg, #28a745, #1e7e34); border-color: #19692c; }
- .btn-save:active { background: #19692c; }
- .btn-load { background: linear-gradient(180deg, #007aff, #0056b3); border-color: #004085; }
- .btn-load:active { background: #004085; }
- .btn-delete { background: linear-gradient(180deg, #dc3545, #bd2130); border-color: #a71d2a; }
- .btn-delete:active { background: #a71d2a; }
- /* ==========================================================================
- 4. ÁREA PRINCIPAL DA CONSOLE DE MIXAGEM
- ========================================================================== */
- .console-layout {
- flex: 1;
- display: flex;
- gap: 6px;
- background-color: var(--fader-track);
- padding: 6px;
- border-radius: 8px;
- overflow: hidden;
- border: 1px solid #aeaeae;
- }
- .master-section {
- width: 80px;
- background: linear-gradient(135deg, #ffffff, #e5e5e5);
- border: 2px solid var(--primary);
- border-radius: 6px;
- padding: 8px 2px;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: space-between;
- box-sizing: border-box;
- box-shadow: var(--shadow-sm);
- }
- .master-title {
- font-size: 0.75rem;
- font-weight: 900;
- color: var(--primary);
- letter-spacing: 0.5px;
- text-shadow: 0 1px 0 #fff;
- }
- .master-display {
- font-size: 0.75rem;
- font-weight: bold;
- color: #fff;
- background: #222;
- padding: 2px 6px;
- border-radius: 4px;
- border: 1px solid #000;
- min-width: 30px;
- text-align: center;
- font-family: monospace;
- }
- .mute-groups {
- display: flex;
- flex-direction: column;
- gap: 4px;
- width: 90%;
- margin-top: 4px;
- }
- .mg-btn {
- font-size: 0.6rem;
- padding: 4px 0;
- font-weight: bold;
- border-radius: 3px;
- border: 1px solid #555;
- background: linear-gradient(180deg, #777, #555);
- color: #fff;
- cursor: pointer;
- text-align: center;
- }
- .mg-btn.active {
- background: linear-gradient(180deg, var(--danger), #801010);
- border-color: #600000;
- }
- .mixer-container {
- flex: 1;
- display: grid;
- grid-template-columns: repeat(16, minmax(108px, 1fr));
- gap: 4px;
- overflow-x: auto;
- -webkit-overflow-scrolling: touch;
- }
- /* ==========================================================================
- 5. LAYOUT DOS CANAIS (CHANNEL STRIPS) E FADERS
- ========================================================================== */
- .channel-strip {
- background: linear-gradient(180deg, var(--card-bg), #e1e4e6);
- border: 1px solid var(--border);
- border-radius: 6px;
- padding: 6px 1px;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: space-between;
- height: 100%;
- box-sizing: border-box;
- box-shadow: var(--shadow-sm);
- position: relative;
- }
- .channel-strip.muted { 
- background: linear-gradient(180deg, #cbbbbb, #a89999); 
- border-color: #997777; 
- }
- .channel-strip.linked-next::after {
- content: 'LINK';
- position: absolute;
- right: -4px; 
- top: 40%;
- background: var(--primary);
- color: white;
- font-size: 0.5rem;
- font-weight: bold;
- padding: 1px 2px;
- border-radius: 3px;
- z-index: 10;
- }
- .strip-header-controls {
- display: flex;
- width: 92%;
- align-items: center;
- justify-content: center;
- }
- .channel-name-input {
- width: 100%;
- background-color: var(--input-bg);
- color: var(--text);
- border: 1px solid var(--border);
- border-radius: 4px;
- font-size: 0.65rem;
- font-weight: bold;
- text-align: center;
- padding: 4px 0;
- outline: none;
- text-transform: uppercase;
- }
- .pan-container {
- display: flex;
- flex-direction: column;
- align-items: center;
- width: 90%;
- margin: 2px 0;
- }
- .pan-label { 
- font-size: 0.55rem; 
- font-weight: bold; 
- color: var(--text-muted); 
- }
- .pan-input { 
- width: 100%; 
- height: 16px; 
- -webkit-appearance: none; 
- appearance: none;
- background: #888; 
- border-radius: 4px; 
- outline: none; 
- border: 1px solid #666; 
- }
- .pan-input::-webkit-slider-thumb { 
- -webkit-appearance: none; 
- appearance: none; 
- width: 14px;
- height: 14px; 
- background: var(--primary); 
- border-radius: 2px; 
- cursor: pointer; 
- }
- .link-row-btn {
- width: 80%;
- font-size: 0.65rem;
- font-weight: bold;
- padding: 4px 0;
- border: 1px solid #777;
- background: linear-gradient(180deg, #eee, #ccc);
- color: #111;
- cursor: pointer;
- border-radius: 4px;
- text-align: center;
- margin: 2px 0;
- box-shadow: 0 1px 2px rgba(0,0,0,0.1);
- }
- .link-row-btn.active {
- background: linear-gradient(180deg, var(--primary), #004085);
- color: white;
- border-color: #002752;
- }
- .volume-display {
- font-size: 0.8rem;
- font-weight: 700;
- color: #fff;
- background-color: #333;
- border: 1px solid #111;
- padding: 2px 4px;
- border-radius: 4px;
- min-width: 28px;
- text-align: center;
- font-family: monospace;
- }
- .fader-layout-box {
- flex: 1;
- display: flex;
- align-items: center;
- justify-content: center;
- gap: 3px;
- width: 100%;
- height: 250px;
- }
- .fader-wrapper {
- width: 40px;
- height: 250px;
- position: relative;
- display: flex;
- align-items: center;
- justify-content: center;
- }
- .vu-meter {
- display: flex;
- flex-direction: column;
- gap: 2px;
- width: 6px;
- height: 230px;
- background-color: #111;
- padding: 2px 1px;
- border-radius: 2px;
- justify-content: flex-end;
- }
- .vu-segment {
- flex: 1;
- background-color: #222;
- border-radius: 1px;
- transition: background-color 0.1s ease;
- }
- .vu-segment.green.active { background-color: #2ecc71; box-shadow: 0 0 4px #2ecc71; }
- .vu-segment.yellow.active { background-color: #f1c40f; box-shadow: 0 0 4px #f1c40f; }
- .vu-segment.red.active { background-color: #e74c3c; box-shadow: 0 0 4px #e74c3c; }
- .fader-input {
- -webkit-appearance: none; 
- appearance: none;
- width: 230px; 
- height: 8px;
- background: #888; 
- border-radius: 4px; 
- outline: none;
- position: absolute; 
- transform: rotate(-90deg);
- touch-action: none; 
- cursor: pointer; 
- margin: 0; 
- padding: 0;
- border: 1px solid #666; 
- box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
- }
- .fader-input::-webkit-slider-thumb {
- -webkit-appearance: none; 
- appearance: none;
- width: 26px; 
- height: 38px; 
- border-radius: 4px;
- background: linear-gradient(180deg, #ffffff, #cccccc);
- border: 1px solid #666; 
- box-shadow: 0px 3px 6px rgba(0,0,0,0.4);
- }
- .master-section .fader-input::-webkit-slider-thumb { 
- background: linear-gradient(180deg, #fff, #999); 
- border-color: var(--primary); 
- }
- .btn-group { 
- display: flex; 
- width: 92%; 
- gap: 3px; 
- }
- .fx-btn, .mute-btn, .solo-btn { 
- border: 1px solid #777; 
- border-radius: 4px; 
- font-size: 0.65rem;
- font-weight: bold; 
- padding: 6px 0; 
- cursor: pointer; 
- text-align: center; 
- color: #fff; 
- }
- .fx-btn { flex: 2; background: linear-gradient(180deg, #555, #333); }
- .mute-btn { flex: 1; background: linear-gradient(180deg, #995555, #773333); }
- .mute-btn.active { 
- background: linear-gradient(180deg, var(--danger), #801010); 
- border-color: #600000; 
- }
- .solo-btn { flex: 1; background: linear-gradient(180deg, #999955, #777733); color: #fff; }
- .solo-btn.active { 
- background: linear-gradient(180deg, #f1c40f, #b7950b); 
- border-color: #7d6608; 
- color: #000; 
- }
- /* ==========================================================================
- 6. COMPONENTES DE INTERFACE MODAL E SISTEMA DE ABAS (TABS)
- ========================================================================== */
- .modal-overlay {
- position: fixed; 
- top: 0; 
- left: 0; 
- width: 100vw; 
- height: 100vh;
- background-color: rgba(0, 0, 0, 0.6);
- display: flex; 
- justify-content: center; 
- align-items: center;
- z-index: 1000; 
- opacity: 0; 
- pointer-events: none;
- transition: opacity 0.15s ease;
- }
- .modal-overlay.active { 
- opacity: 1; 
- pointer-events: auto; 
- }
- .modal-content { 
- background: linear-gradient(180deg, #ffffff, #e5e5e5); 
- border: 2px solid #aeaeae; 
- border-radius: 8px; 
- width: 95%; 
- max-width: 650px; 
- padding: 18px; 
- box-sizing: border-box; 
- box-shadow: var(--shadow-md); 
- }
- .modal-header { 
- display: flex; 
- justify-content: space-between; 
- align-items: center; 
- margin-bottom: 12px; 
- border-bottom: 1px solid #999; 
- padding-bottom: 8px; 
- }
- .modal-title { 
- font-size: 1rem; 
- font-weight: bold; 
- color: #222; 
- }
- .close-btn { 
- background: linear-gradient(180deg, #666, #444); 
- color: white; 
- border: 1px solid #333; 
- padding: 5px 12px; 
- border-radius: 4px; 
- font-weight: bold; 
- cursor: pointer; 
- }
- .modal-tabs {
- display: flex;
- gap: 4px;
- margin-bottom: 10px;
- border-bottom: 2px solid var(--border);
- }
- .tab-btn {
- padding: 6px 14px;
- background: #e0e0e0;
- border: 1px solid var(--border);
- border-bottom: none;
- border-top-left-radius: 4px;
- border-top-right-radius: 4px;
- font-size: 0.75rem;
- font-weight: bold;
- cursor: pointer;
- color: var(--text-muted);
- transition: background var(--transition-fast);
- }
- .tab-btn.active {
- background: #b8b8b8;
- color: var(--text);
- border-color: #999;
- box-shadow: inset 0 2px 0 var(--primary);
- }
- .tab-content {
- display: none;
- }
- .tab-content.active {
- display: block;
- }
- .modal-fx-grid { 
- display: flex; 
- flex-direction: row; 
- gap: 8px; 
- justify-content: center; 
- overflow-x: auto; 
- padding: 10px 0; 
- background: #b8b8b8; 
- border-radius: 6px; 
- border: 1px solid #999; 
- }
- .fx-column { 
- display: flex; 
- flex-direction: column; 
- align-items: center; 
- justify-content: space-between; 
- height: 340px; 
- width: 68px; 
- background: linear-gradient(180deg, #f5f7f8, #e1e4e6);
- padding: 6px 2px; 
- border-radius: 4px; 
- border: 1px solid #999; 
- }
- .fx-label { 
- font-size: 0.62rem; 
- font-weight: 700; 
- color: #333; 
- text-align: center; 
- text-transform: uppercase; 
- max-width: 66px; 
- overflow: hidden; 
- height: 24px; 
- display: flex; 
- align-items: center; 
- justify-content: center; 
- line-height: 1.1; 
- }
- .fx-label.eq-lbl { color: var(--eq-color); }
- 
- .fx-slider-wrapper { 
- flex: 1; 
- display: flex; 
- align-items: center; 
- justify-content: center; 
- width: 40px; 
- height: 260px; 
- position: relative; 
- }
- .fx-slider { 
- -webkit-appearance: none; 
- appearance: none; 
- width: 240px; 
- height: 8px;
- background: #999; 
- border-radius: 4px; 
- outline: none; 
- position: absolute; 
- transform: rotate(-90deg); 
- touch-action: none; 
- cursor: pointer; 
- margin: 0; 
- padding: 0; 
- border: 1px solid #777; 
- }
- .fx-slider::-webkit-slider-thumb {
- -webkit-appearance: none; 
- appearance: none; 
- width: 24px;
- height: 36px; 
- border-radius: 4px; 
- background: linear-gradient(180deg, #555, #333); 
- cursor: pointer; 
- border: 1px solid #222; 
- box-shadow: 0px 2px 4px rgba(0,0,0,0.3); 
- }
- .fx-slider.eq-slide::-webkit-slider-thumb { 
- background: linear-gradient(180deg, #e67e22, var(--eq-color)); 
- }
- .fx-value { 
- font-size: 0.75rem; 
- font-weight: bold; 
- text-align: center; 
- background: #222; 
- color: #fff; 
- padding: 2px 4px; 
- border-radius: 4px; 
- border: 1px solid #000; 
- min-width: 30px; 
- font-family: monospace; 
- }
- .patch-selector-container {
- background: #b8b8b8;
- padding: 16px;
- border-radius: 6px;
- border: 1px solid #999;
- display: flex;
- flex-direction: column;
- gap: 12px;
- }
- .patch-row {
- display: grid;
- grid-template-columns: 1fr;
- gap: 12px;
- }
- .patch-field {
- display: flex;
- flex-direction: column;
- gap: 6px;
- }
- .patch-field label {
- font-size: 0.75rem;
- font-weight: bold;
- color: var(--text);
- text-transform: uppercase;
- letter-spacing: 0.3px;
- }
- .patch-field select {
- width: 100%;
- padding: 8px;
- font-size: 0.85rem;
- font-weight: bold;
- border-radius: 4px;
- border: 1px solid #888;
- background: var(--input-bg);
- color: var(--text);
- outline: none;
- }
- .save-dialog-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
- .save-dialog-grid select { width: 100%; padding: 6px; font-size: 0.85rem; font-weight: bold; border-radius: 4px; border: 1px solid #888; background: var(--input-bg); color: var(--text); }
- .save-input-container { display: none; flex-direction: column; gap: 4px; }
- .save-input-container input { width: 100%; padding: 6px; font-size: 0.85rem; border-radius: 4px; border: 1px solid #888; box-sizing: border-box; background: var(--input-bg); color: var(--text); }
- .color-picker-container { display: flex; gap: 4px; margin-bottom: 8px; justify-content: center; background: rgba(0,0,0,0.05); padding: 6px; border-radius: 4px; }
- .color-dot { width: 20px; height: 20px; border-radius: 50%; border: 1px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3); cursor: pointer; }
- .color-dot.active { border: 2px solid #000; scale: 1.1; }
- </style>
+body.aluminium-theme {
+--bg-color: #e1e4e6;
+--card-bg: #f5f7f8;
+--primary: #007aff;
+--accent: #34c759;
+--eq-color: #ff9500;
+--danger: #ff3b30;
+--text: #1c1c1e;
+--text-muted: #8e8e93;
+--border: #c7c7cc;
+--fader-track: #d1d1d6;
+--input-bg: #ffffff;
+}
+html, body {
+overflow: hidden;
+touch-action: none;
+height: 100vh;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+background-color: var(--bg-color);
+color: var(--text);
+padding: 8px;
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+user-select: none;
+transition: background-color 0.2s, color 0.2s;
+}
+header {
+margin-bottom: 6px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 8px;
+background: linear-gradient(180deg, #d5d5d5, #b5b5b5);
+padding: 6px 12px;
+border-radius: 6px;
+border: 1px solid var(--border);
+box-shadow: inset 0 1px 0 #fff, 0 2px 4px rgba(0,0,0,0.15);
+}
+body.aluminium-theme header {
+background: linear-gradient(180deg, #ffffff, #e5e5e5);
+box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.header-left {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+h1 { margin: 0; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.3px; color: #222; }
+.midi-status-container {
+display: flex;
+align-items: center;
+gap: 6px;
+}
+#status-bar {
+padding: 3px 10px;
+border-radius: 4px;
+font-size: 0.75rem;
+font-weight: bold;
+background-color: #eedddd;
+color: var(--danger);
+border: 1px solid #cc9999;
+}
+#status-bar.connected {
+background-color: #ddeedd;
+color: var(--accent);
+border: 1px solid #99cc99;
+}
+.midi-led {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #555;
+border: 1px solid #333;
+transition: background-color 0.05s ease;
+}
+.midi-led.blink {
+background-color: #30d158;
+box-shadow: 0 0 8px #30d158;
+}
+.crud-container {
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.crud-container select {
+background-color: var(--input-bg);
+color: var(--text);
+border: 1px solid var(--border);
+padding: 5px 8px;
+border-radius: 4px;
+font-size: 0.75rem;
+font-weight: bold;
+outline: none;
+height: 28px;
+box-sizing: border-box;
+}
+.crud-btn {
+padding: 5px 12px;
+font-size: 0.75rem;
+font-weight: bold;
+border: 1px solid #777;
+border-radius: 4px;
+cursor: pointer;
+color: #fff;
+background: linear-gradient(180deg, #666, #444);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.2);
+height: 28px;
+box-sizing: border-box;
+}
+.crud-btn:active { background: #333; }
+.btn-save { background: linear-gradient(180deg, #28a745, #1e7e34); border-color: #19692c; }
+.btn-save:active { background: #19692c; }
+.btn-load { background: linear-gradient(180deg, #007aff, #0056b3); border-color: #004085; }
+.btn-load:active { background: #004085; }
+.btn-delete { background: linear-gradient(180deg, #dc3545, #bd2130); border-color: #a71d2a; }
+.btn-delete:active { background: #a71d2a; }
+.btn-theme { background: linear-gradient(180deg, #6c757d, #495057); border-color: #343a40; }
+.console-layout {
+flex: 1;
+display: flex;
+gap: 6px;
+background-color: #959595;
+padding: 6px;
+border-radius: 8px;
+overflow: hidden;
+border: 1px solid #777;
+box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+body.aluminium-theme .console-layout {
+background-color: #d1d1d6;
+border-color: #aeaeae;
+}
+.master-section {
+width: 80px;
+background: linear-gradient(135deg, #dedede, #b5b5b5);
+border: 2px solid var(--primary);
+border-radius: 6px;
+padding: 8px 2px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+box-sizing: border-box;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+body.aluminium-theme .master-section {
+background: linear-gradient(135deg, #ffffff, #e5e5e5);
+}
+.master-title {
+font-size: 0.75rem;
+font-weight: 900;
+color: var(--primary);
+letter-spacing: 0.5px;
+text-shadow: 0 1px 0 #fff;
+}
+.master-display {
+font-size: 0.75rem;
+font-weight: bold;
+color: #fff;
+background: #222;
+padding: 2px 6px;
+border-radius: 4px;
+border: 1px solid #000;
+min-width: 30px;
+text-align: center;
+font-family: monospace;
+}
+.mute-groups {
+display: flex;
+flex-direction: column;
+gap: 4px;
+width: 90%;
+margin-top: 4px;
+}
+.mg-btn {
+font-size: 0.6rem;
+padding: 4px 0;
+font-weight: bold;
+border-radius: 3px;
+border: 1px solid #555;
+background: linear-gradient(180deg, #777, #555);
+color: #fff;
+cursor: pointer;
+text-align: center;
+}
+.mg-btn.active {
+background: linear-gradient(180deg, var(--danger), #801010);
+border-color: #600000;
+}
+.mixer-container {
+flex: 1;
+display: grid;
+grid-template-columns: repeat(16, minmax(108px, 1fr));
+gap: 4px;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+.channel-strip {
+background: linear-gradient(180deg, var(--card-bg), #b0b0b0);
+border: 1px solid var(--border);
+border-radius: 6px;
+padding: 6px 1px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+height: 100%;
+box-sizing: border-box;
+box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+position: relative;
+}
+body.aluminium-theme .channel-strip {
+background: linear-gradient(180deg, var(--card-bg), #e1e4e6);
+}
+.channel-strip.muted { background: linear-gradient(180deg, #cbbbbb, #a89999); border-color: #997777; }
+.channel-strip.linked-next::after {
+content: 'LINK';
+position: absolute;
+right: -4px; top: 40%;
+background: var(--primary);
+color: white;
+font-size: 0.5rem;
+font-weight: bold;
+padding: 1px 2px;
+border-radius: 3px;
+z-index: 10;
+}
+.strip-header-controls {
+display: flex;
+width: 92%;
+align-items: center;
+justify-content: center;
+}
+.channel-name-input {
+width: 100%;
+background-color: var(--input-bg);
+color: var(--text);
+border: 1px solid var(--border);
+border-radius: 4px;
+font-size: 0.65rem;
+font-weight: bold;
+text-align: center;
+padding: 4px 0;
+outline: none;
+text-transform: uppercase;
+}
+.pan-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 90%;
+margin: 2px 0;
+}
+.pan-label { font-size: 0.55rem; font-weight: bold; color: var(--text-muted); }
+.pan-input { width: 100%; height: 16px; -webkit-appearance: none; appearance: none; background: #888; border-radius: 4px; outline: none; border: 1px solid #666; }
+.pan-input::-webkit-slider-thumb {-webkit-appearance: none; appearance: none; width: 14px; height: 14px; background: #222; border-radius: 2px; cursor: pointer; }
+body.aluminium-theme .pan-input::-webkit-slider-thumb { background: var(--primary); }
+.link-row-btn {
+width: 80%;
+font-size: 0.65rem;
+font-weight: bold;
+padding: 4px 0;
+border: 1px solid #777;
+background: linear-gradient(180deg, #eee, #ccc);
+color: #111;
+cursor: pointer;
+border-radius: 4px;
+text-align: center;
+margin: 2px 0;
+box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.link-row-btn.active {
+background: linear-gradient(180deg, var(--primary), #004085);
+color: white;
+border-color: #002752;
+}
+.volume-display {
+font-size: 0.8rem;
+font-weight: 700;
+color: #fff;
+background-color: #333;
+border: 1px solid #111;
+padding: 2px 4px;
+border-radius: 4px;
+min-width: 28px;
+text-align: center;
+font-family: monospace;
+}
+.fader-layout-box {
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 3px;
+width: 100%;
+height: 250px;
+}
+.fader-wrapper {
+width: 40px;
+height: 250px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.vu-meter {
+display: flex;
+flex-direction: column;
+gap: 2px;
+width: 6px;
+height: 230px;
+background-color: #111;
+padding: 2px 1px;
+border-radius: 2px;
+justify-content: flex-end;
+}
+.vu-segment {
+flex: 1;
+background-color: #222;
+border-radius: 1px;
+transition: background-color 0.1s ease;
+}
+.vu-segment.green.active { background-color: #2ecc71; box-shadow: 0 0 4px #2ecc71; }
+.vu-segment.yellow.active { background-color: #f1c40f; box-shadow: 0 0 4px #f1c40f; }
+.vu-segment.red.active { background-color: #e74c3c; box-shadow: 0 0 4px #e74c3c; }
+.fader-input {
+-webkit-appearance: none; appearance: none;
+width: 230px; height: 8px;
+background: #888; border-radius: 4px; outline: none;
+position: absolute; transform: rotate(-90deg);
+touch-action: none; cursor: pointer; margin: 0; padding: 0;
+border: 1px solid #666; box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+.fader-input::-webkit-slider-thumb {
+-webkit-appearance: none; appearance: none;
+width: 26px; height: 38px; border-radius: 4px;
+background: linear-gradient(180deg, #ffffff, #cccccc);
+border: 1px solid #666; box-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+}
+.master-section .fader-input::-webkit-slider-thumb { background: linear-gradient(180deg, #fff, #999); border-color: var(--primary); }
+.btn-group { display: flex; width: 92%; gap: 3px; }
+.fx-btn, .mute-btn, .solo-btn { border: 1px solid #777; border-radius: 4px; font-size: 0.65rem; font-weight: bold; padding: 6px 0; cursor: pointer; text-align: center; color: #fff; }
+.fx-btn { flex: 2; background: linear-gradient(180deg, #555, #333); }
+.mute-btn { flex: 1; background: linear-gradient(180deg, #995555, #773333); }
+.mute-btn.active { background: linear-gradient(180deg, var(--danger), #801010); border-color: #600000; }
+.solo-btn { flex: 1; background: linear-gradient(180deg, #999955, #777733); color: #fff; }
+.solo-btn.active { background: linear-gradient(180deg, #f1c40f, #b7950b); border-color: #7d6608; color: #000; }
+.modal-overlay {
+position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+background-color: rgba(0, 0, 0, 0.6);
+display: flex; justify-content: center; align-items: center;
+z-index: 1000; opacity: 0; pointer-events: none;
+transition: opacity 0.15s ease;
+}
+.modal-overlay.active { opacity: 1; pointer-events: auto; }
+.modal-content { background: linear-gradient(180deg, #e0e0e0, #cccccc); border: 2px solid #666; border-radius: 8px; width: 95%; max-width: 650px; padding: 18px; box-sizing: border-box; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+body.aluminium-theme .modal-content { background: linear-gradient(180deg, #ffffff, #e5e5e5); border-color: #aeaeae; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #999; padding-bottom: 8px; }
+.modal-title { font-size: 1rem; font-weight: bold; color: #222; }
+.close-btn { background: linear-gradient(180deg, #666, #444); color: white; border: 1px solid #333; padding: 5px 12px; border-radius: 4px; font-weight: bold; cursor: pointer; }
+.modal-fx-grid { display: flex; flex-direction: row; gap: 8px; justify-content: center; overflow-x: auto; padding: 10px 0; background: #b8b8b8; border-radius: 6px; border: 1px solid #999; }
+body.aluminium-theme .modal-fx-grid { background: #d1d1d6; }
+.fx-column { display: flex; flex-direction: column; align-items: center; justify-content: space-between; height: 340px; width: 68px; background: linear-gradient(180deg, #cfcfcf, #a8a8a8); padding: 6px 2px; border-radius: 4px; border: 1px solid #999; }
+body.aluminium-theme .fx-column { background: linear-gradient(180deg, #f5f7f8, #e1e4e6); }
+.fx-label { font-size: 0.62rem; font-weight: 700; color: #333; text-align: center; text-transform: uppercase; max-width: 66px; overflow: hidden; height: 24px; display: flex; align-items: center; justify-content: center; line-height: 1.1; }
+.fx-label.eq-lbl { color: var(--eq-color); }
+.fx-slider-wrapper { flex: 1; display: flex; align-items: center; justify-content: center; width: 40px; height: 260px; position: relative; }
+.fx-slider { -webkit-appearance: none; appearance: none; width: 240px; height: 8px; background: #999; border-radius: 4px; outline: none; position: absolute; transform: rotate(-90deg); touch-action: none; cursor: pointer; margin: 0; padding: 0; border: 1px solid #777; }
+.fx-slider::-webkit-slider-thumb {-webkit-appearance: none; appearance: none; width: 24px; height: 36px; border-radius: 4px; background: linear-gradient(180deg, #555, #333); cursor: pointer; border: 1px solid #222; box-shadow: 0px 2px 4px rgba(0,0,0,0.3); }
+.fx-slider.eq-slide::-webkit-slider-thumb { background: linear-gradient(180deg, #e67e22, var(--eq-color)); }
+.fx-value { font-size: 0.75rem; font-weight: bold; text-align: center; background: #222; color: #fff; padding: 2px 4px; border-radius: 4px; border: 1px solid #000; min-width: 30px; font-family: monospace; }
+.save-dialog-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+.save-dialog-grid select { width: 100%; padding: 6px; font-size: 0.85rem; font-weight: bold; border-radius: 4px; border: 1px solid #888; background: var(--input-bg); color: var(--text); }
+.save-input-container { display: none; flex-direction: column; gap: 4px; }
+.save-input-container input { width: 100%; padding: 6px; font-size: 0.85rem; border-radius: 4px; border: 1px solid #888; box-sizing: border-box; background: var(--input-bg); color: var(--text); }
+.color-picker-container { display: flex; gap: 4px; margin-bottom: 8px; justify-content: center; background: rgba(0,0,0,0.05); padding: 6px; border-radius: 4px; }
+.color-dot { width: 20px; height: 20px; border-radius: 50%; border: 1px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.3); cursor: pointer; }
+.color-dot.active { border: 2px solid #000; scale: 1.1; }
+</style>
 </head>
 <body>
- <header>
- <div class="header-left">
- <h1>XPS-10 Mixer Pro & Performance Manager</h1>
- <div class="midi-status-container">
- <div id="status-bar">Aguardando MIDI...</div>
- <div class="midi-led" id="midi-activity-led"></div>
- </div>
- </div>
- <div class="crud-container">
- <button class="crud-btn btn-load" style="background: linear-gradient(180deg, #ff9500, #cc7a00); border-color: #aa6600;" onclick="solicitarPerformanceHardware()">REQUISITAR PERFORMANCE</button>
- <select id="scene-select">
- <option value="">-- Mixagens Salvas --</option>
- </select>
- <button class="crud-btn btn-load" onclick="carregarCena()">ABRIR</button>
- <button class="crud-btn btn-save" onclick="abrirModalSalvar()">SALVAR</button>
- <button class="crud-btn btn-delete" onclick="deletarCena()">EXCLUIR</button>
- </div>
- </header>
- <div class="console-layout">
- <div class="master-section">
- <div class="master-title">MASTER</div>
- <div class="fader-wrapper">
- <input type="range" class="fader-input" id="master-fader" min="0" max="127" value="127">
- </div>
- <div class="master-display" id="master-val">127</div>
- <div class="mute-groups">
- <button class="mg-btn" id="mg1" onclick="toggleMuteGroup(1)">MUTE 1-8</button>
- <button class="mg-btn" id="mg2" onclick="toggleMuteGroup(2)">MUTE 9-16</button>
- </div>
- </div>
- <main class="mixer-container" id="mixer"></main>
- </div>
- <div class="modal-overlay" id="fx-modal">
- <div class="modal-content">
- <div class="modal-header">
- <div class="modal-title" id="modal-ch-title">Editar Canal</div>
- <button class="close-btn" onclick="fecharPopup()">FECHAR</button>
- </div>
- 
- <div class="modal-tabs">
- <button class="tab-btn active" id="tab-fx-btn" onclick="switchTab('fx')">EFEITOS & EQ</button>
- <button class="tab-btn" id="tab-patch-btn" onclick="switchTab('patch')">SELEÇÃO DE TIMBRE</button>
- </div>
- <div class="tab-content active" id="tab-fx-content">
- <div class="color-picker-container" id="ch-color-picker"></div>
- <div class="modal-fx-grid" id="modal-sliders-container"></div>
- </div>
- <div class="tab-content" id="tab-patch-content">
- <div class="patch-selector-container">
- <div class="patch-row">
- <div class="patch-field">
- <label for="patch-bank">Banco do Instrumento (MSB/LSB)</label>
- <select id="patch-bank" onchange="atualizarSelectTimbres()"></select>
- </div>
- </div>
- <div class="patch-row" style="margin-top: 8px;">
- <div class="patch-field">
- <label for="patch-program">Timbre / Patch (Program Change)</label>
- <select id="patch-program" onchange="enviarMudancaTimbre()"></select>
- </div>
- </div>
- </div>
- </div>
- </div>
- </div>
- <div class="modal-overlay" id="save-modal">
- <div class="modal-content" style="max-width: 400px;">
- <div class="modal-header">
- <div class="modal-title">Salvar Mixagem</div>
- <button class="close-btn" onclick="fecharModalSalvar()">CANCELAR</button>
- </div>
- <div class="save-dialog-grid">
- <label style="font-size:0.8rem; font-weight:bold;">Destino da Gravação:</label>
- <select id="save-target-select" onchange="gerenciarPromptNome()"></select>
- <div class="save-input-container" id="save-name-block">
- <label style="font-size:0.8rem; font-weight:bold;">Nome da Nova Mixagem:</label>
- <input type="text" id="save-custom-name" placeholder="Digite o nome..." maxlength="20">
- </div>
- <button class="crud-btn btn-save" style="width:100%; margin-top:8px; height:34px;" onclick="executarSalvamento()">GRAVAR ALTERAÇÕES</button>
- </div>
- </div>
- </div>
- <script>
- // ==========================================================================
- // 11. CONSTANTES GLOBAIS E ESTADO DO APLICATIVO
- // ==========================================================================
- 
- // Estado centralizado dos 16 canais (Injetando parâmetros de banco e programa)
- let canaisEstado = Array.from({ length: 16 }, () => ({
- volume: 100,
- reverb: 40,
- cutoff: 64,
- resonance: 64,
- attack: 64,
- release: 64,
- eqLow: 64,
- eqMid: 64,
- eqHigh: 64,
- pan: 64,
- isMuted: false, // Controlado via SysEx Part Sw
- isSoloed: false,
- isLinked: false,
- label: "",
- color: "",
- bankIndex: 0, // Índice do banco selecionado no array de bancos
- patchPC: 1 // Número do programa (Program Change de 1 a 128)
- }));
- let isDirty = false;
- let midiOutput = null;
- let midiInput = null;
- let canalAtivoNoPopup = 0;
- let crossfadeIntervals = [];
- let RO_BANCOS_XPS10 = [];
- const timbresDataEl = document.getElementById("app-timbres-data");
- if (timbresDataEl) {
-   try {
-     const embeddedData = JSON.parse(timbresDataEl.textContent);
-     RO_BANCOS_XPS10 = embeddedData.bancos_xps10 || [];
-   } catch (error) {
-     console.warn("Não foi possível carregar os timbres embutidos.", error);
-   }
- }
+<header>
+<div class="header-left">
+<h1>XPS-10 Mixer Pro + EQ - Vsouza</h1>
+<div class="midi-status-container">
+<div id="status-bar">Aguardando MIDI...</div>
+<div class="midi-led" id="midi-activity-led"></div>
+</div>
+</div>
+<div class="crud-container">
+<button class="crud-btn btn-theme" onclick="alternarTema()">ALUMINIUM</button>
+<select id="scene-select"><option value="">-- Mixagens --</option></select>
+<button class="crud-btn btn-load" onclick="carregarCena()">ABRIR</button>
+<button class="crud-btn btn-save" onclick="abrirModalSalvar()">SALVAR</button>
+<button class="crud-btn btn-delete" onclick="deletarCena()">EXCLUIR</button>
+<button class="crud-btn btn-file" onclick="exportarBackup()">EXPORTAR</button>
+<button class="crud-btn btn-file" onclick="document.getElementById('import-file').click()">IMPORTAR</button>
+<input type="file" id="import-file" style="display:none;" onchange="importarBackup(event)">
+</div>
+</header>
+<div class="console-layout">
+<div class="master-section">
+<div class="master-title">MASTER</div>
+<div class="fader-wrapper"><input type="range" class="fader-input" id="master-fader" min="0" max="127" value="127"></div>
+<div class="master-display" id="master-val">127</div>
+<div class="mute-groups">
+<button class="mg-btn" id="mg1" onclick="toggleMuteGroup(1)">MUTE 1-8</button>
+<button class="mg-btn" id="mg2" onclick="toggleMuteGroup(2)">MUTE 9-16</button>
+</div>
+</div>
+<main class="mixer-container" id="mixer"></main>
+</div>
+<div class="modal-overlay" id="fx-modal">
+<div class="modal-content">
+<div class="modal-header">
+<div class="modal-title" id="modal-ch-title">FX & EQ Edit</div>
+<button class="close-btn" onclick="fecharPopup()">FECHAR</button>
+</div>
+<div class="color-picker-container" id="ch-color-picker"></div>
+<div class="modal-fx-grid" id="modal-sliders-container"></div>
+</div>
+</div>
+<div class="modal-overlay" id="save-modal">
+<div class="modal-content" style="max-width: 400px;">
+<div class="modal-header">
+<div class="modal-title">Salvar Mixagem</div>
+<button class="close-btn" onclick="fecharModalSalvar()">CANCELAR</button>
+</div>
+<div class="save-dialog-grid">
+<label style="font-size:0.8rem; font-weight:bold;">Destino da Gravação:</label>
+<select id="save-target-select" onchange="gerenciarPromptNome()"></select>
+<div class="save-input-container" id="save-name-block">
+<label style="font-size:0.8rem; font-weight:bold;">Nome da Nova Mixagem:</label>
+<input type="text" id="save-custom-name" placeholder="Digite o nome..." maxlength="20">
+</div>
+<button class="crud-btn btn-save" style="width:100%; margin-top:8px; height:34px;" onclick="executarSalvamento()">GRAVAR ALTERAÇÕES</button>
+</div>
+</div>
+</div>
+<script>
+let canaisEstado = Array.from({ length: 16 }, () => ({
+volume: 100, reverb: 40, cutoff: 64, resonance: 64, attack: 64, release: 64,
+eqLow: 64, eqMid: 64, eqHigh: 64, pan: 64, isMuted: false, isSoloed: false,
+isLinked: false, label: "", color: ""
+}));
+let isDirty = false;
+let midiOutput = null;
+let canalAtivoNoPopup = 0;
+let crossfadeIntervals = [];
+let isLoadingScene = false;
+const stripColors = [
+{ name: "Padrão", value: "" },
+{ name: "Azul", value: "linear-gradient(180deg, #3498db, #2980b9)" },
+{ name: "Vermelho", value: "linear-gradient(180deg, #e74c3c, #c0392b)" },
+{ name: "Verde", value: "linear-gradient(180deg, #2ecc71, #27ae60)" },
+{ name: "Amarelo", value: "linear-gradient(180deg, #f1c40f, #f39c12)" },
+{ name: "Roxo", value: "linear-gradient(180deg, #9b59b6, #8e44ad)" }
+];
+const statusBar = document.getElementById("status-bar");
+const modal = document.getElementById("fx-modal");
+const saveModal = document.getElementById("save-modal");
+const activityLed = document.getElementById("midi-activity-led");
+if (navigator.requestMIDIAccess) {
+navigator.requestMIDIAccess({ sysex: true }).then(access => {
+function tentarConectarMIDI() {
+let dispositivoAchado = false;
+for (let output of access.outputs.values()) {
+if (output.name.toLowerCase().includes("xps-10") || output.name.toLowerCase().includes("roland")) {
+midiOutput = output;
+statusBar.innerText = "Conectado";
+statusBar.className = "";
+statusBar.classList.add("connected");
+dispositivoAchado = true;
+break;
+}
+}
+for (let input of access.inputs.values()) {
+if (input.name.toLowerCase().includes("xps-10") || input.name.toLowerCase().includes("roland")) {
+input.onmidimessage = tratarMensagemMidiRecebida;
+}
+}
+if (!dispositivoAchado) { definirComoDesconectado(); }
+}
+function definirComoDesconectado() {
+midiOutput = null;
+statusBar.innerText = "Aguardando MIDI...";
+statusBar.className = "";
+}
+access.onstatechange = (event) => {
+const porta = event.port;
+if (porta.name.toLowerCase().includes("xps-10") || porta.name.toLowerCase().includes("roland")) {
+if (porta.state === "connected") { tentarConectarMIDI(); }
+else if (porta.state === "disconnected") { definirComoDesconectado(); }
+}
+};
+tentarConectarMIDI();
+}, () => statusBar.innerText = "Erro MIDI");
+}
+function tratarMensagemMidiRecebida(event) {
+if (isLoadingScene) return;
+}
+function blinkLed() {
+activityLed.classList.add("blink");
+setTimeout(() => activityLed.classList.remove("blink"), 45);
+}
+function enviarCC(canal, cc, valor) {
+if (midiOutput) { midiOutput.send([0xB0 + canal, cc, valor]); blinkLed(); }
+}
+function enviarSysExEQ(canal, parametroOffset, valor) {
+if (!midiOutput) return;
+let addrH = 0x18;
+let addrM1 = 0x00;
+let addrM2 = 0x20 + canal;
+let addrL = parametroOffset;
+let somaBytes = addrH + addrM1 + addrM2 + addrL + valor;
+let checksum = 128 - (somaBytes % 128);
+if (checksum === 128) checksum = 0;
+midiOutput.send([0xF0, 0x41, 0x10, 0x00, 0x00, 0x6A, 0x12, addrH, addrM1, addrM2, addrL, valor, checksum, 0xF7]);
+blinkLed();
+}
+function atualizarVUMeter(ch, volume) {
+const segments = document.querySelectorAll(`#vu-${ch} .vu-segment`);
+const activeCount = Math.ceil((volume/127) * 15);
+segments.forEach((seg, idx) => {
+const invertedIndex = 14 - idx;
+if (invertedIndex < activeCount) { seg.classList.add("active"); }
+else { seg.classList.remove("active"); }
+});
+}
+const masterFader = document.getElementById("master-fader");
+const masterVal = document.getElementById("master-val");
+masterFader.addEventListener("input", (e) => {
+const v = parseInt(e.target.value); masterVal.innerText = v;
+for(let i=0; i<16; i++) enviarCC(i, 11, v);
+});
+const mixer = document.getElementById("mixer");
+for (let i = 0; i < 16; i++) {
+const ch = i;
+const strip = document.createElement("div"); strip.className = "channel-strip"; strip.id = `strip-${ch}`;
+strip.innerHTML = `
+<div class="strip-header-controls">
+<input type="text" class="channel-name-input" id="name-in-${ch}" placeholder="CH ${ch + 1}" maxlength="12">
+</div>
+<div class="pan-container">
+<span class="pan-label" id="pdisp-${ch}">C</span>
+<input type="range" class="pan-input" id="pan-${ch}" min="0" max="127" value="64">
+</div>
+${ch < 15 ? `<button class="link-row-btn" id="lnk-${ch}" onclick="toggleLink(${ch})">LINK STEREO</button>` : '<div style="height:23px;"></div>'}
+<div class="fader-layout-box">
+<div class="vu-meter" id="vu-${ch}">${Array.from({length:15}, (_, idx) => `<div class="vu-segment ${idx<2?'red':idx<5?'yellow':'green'}"></div>`).join("")}</div>
+<div class="fader-wrapper"><input type="range" class="fader-input" id="fad-${ch}" min="0" max="127" value="100"></div>
+</div>
+<div class="volume-display" id="vdisp-${ch}">100</div>
+<div class="btn-group">
+<button class="fx-btn" onclick="abrirPopup(${ch})">FX</button>
+<button class="solo-btn" id="solo-${ch}" onclick="toggleSolo(${ch})">S</button>
+<button class="mute-btn" id="mute-${ch}" onclick="toggleMute(${ch})">M</button>
+</div>`;
+mixer.appendChild(strip);
+atualizarVUMeter(ch, 100);
+document.getElementById(`fad-${ch}`).addEventListener("input", (e) => { moverFaderManual(ch, parseInt(e.target.value)); });
+document.getElementById(`pan-${ch}`).addEventListener("input", (e) => { moverPanManual(ch, parseInt(e.target.value)); });
+document.getElementById(`name-in-${ch}`).addEventListener("input", (e) => { canaisEstado[ch].label = e.target.value; isDirty = true; });
+}
+function moverFaderManual(ch, vol) {
+modificarVolumeEstado(ch, vol);
+if (canaisEstado[ch].isLinked && ch < 15) { modificarVolumeEstado(ch + 1, vol); document.getElementById(`fad-${ch + 1}`).value = vol; }
+else if (ch > 0 && canaisEstado[ch - 1].isLinked) { modificarVolumeEstado(ch - 1, vol); document.getElementById(`fad-${ch - 1}`).value = vol; }
+}
+function modificarVolumeEstado(ch, vol) {
+document.getElementById(`vdisp-${ch}`).innerText = vol;
+canaisEstado[ch].volume = vol; isDirty = true;
+atualizarVUMeter(ch, vol);
+if (!canaisEstado[ch].isMuted && !verificarBloqueioSolo(ch)) enviarCC(ch, 7, vol);
+}
+function moverPanManual(ch, pVal) {
+modificarPanEstado(ch, pVal);
+if (canaisEstado[ch].isLinked && ch < 15) { let pInvertido = 127 - pVal; modificarPanEstado(ch + 1, pInvertido); document.getElementById(`pan-${ch + 1}`).value = pInvertido; }
+}
+function modificarPanEstado(ch, pVal) {
+canaisEstado[ch].pan = pVal; isDirty = true;
+const disp = document.getElementById(`pdisp-${ch}`);
+if(pVal === 64) disp.innerText = "C";
+else if(pVal < 64) disp.innerText = "L" + Math.round(((64-pVal)/64)*100);
+else disp.innerText = "R" + Math.round(((pVal-64)/64)*100);
+enviarCC(ch, 10, pVal);
+}
+function toggleLink(ch) {
+canaisEstado[ch].isLinked = !canaisEstado[ch].isLinked; isDirty = true;
+const btn = document.getElementById(`lnk-${ch}`); const strip = document.getElementById(`strip-${ch}`);
+if(canaisEstado[ch].isLinked) { btn.classList.add("active"); strip.classList.add("linked-next"); moverFaderManual(ch, canaisEstado[ch].volume); }
+else { btn.classList.remove("active"); strip.classList.remove("linked-next"); }
+}
+function toggleMute(ch) {
+const estado = canaisEstado[ch]; const btn = document.getElementById(`mute-${ch}`); const strip = document.getElementById(`strip-${ch}`);
+const faderVal = parseInt(document.getElementById(`fad-${ch}`).value);
+estado.isMuted = !estado.isMuted; isDirty = true;
+if (estado.isMuted) { btn.classList.add("active"); strip.classList.add("muted"); enviarCC(ch, 7, 0); }
+else { btn.classList.remove("active"); strip.classList.remove("muted"); if(!verificarBloqueioSolo(ch)) enviarCC(ch, 7, faderVal); }
+}
+function toggleSolo(ch) {
+canaisEstado[ch].isSoloed = !canaisEstado[ch].isSoloed; isDirty = true;
+document.getElementById(`solo-${ch}`).classList.toggle("active", canaisEstado[ch].isSoloed);
+atualizarFadersPorRegraSoloMute();
+}
+function verificarBloqueioSolo(ch) {
+const algumSoloAtivo = canaisEstado.some(c => c.isSoloed);
+if (algumSoloAtivo && !canaisEstado[ch].isSoloed) return true;
+return false;
+}
+function atualizarFadersPorRegraSoloMute() {
+for(let i=0; i<16; i++) {
+const estado = canaisEstado[i];
+if (estado.isMuted || verificarBloqueioSolo(i)) { enviarCC(i, 7, 0); }
+else { enviarCC(i, 7, estado.volume); }
+}
+}
+function toggleMuteGroup(group) {
+const btn = document.getElementById(`mg${group}`); const active = btn.classList.toggle("active");
+const start = group === 1 ? 0 : 8; const end = group === 1 ? 8 : 16;
+for (let i = start; i < end; i++) { if (canaisEstado[i].isMuted !== active) toggleMute(i); }
+}
+const fxConfig = [
+{ label: "REVERB", cc: 91, chave: "reverb", isEQ: false },
+{ label: "CUTOFF", cc: 74, chave: "cutoff", isEQ: false },
+{ label: "RESONANCE", cc: 71, chave: "resonance", isEQ: false },
+{ label: "ATTACK", cc: 73, chave: "attack", isEQ: false },
+{ label: "RELEASE", cc: 72, chave: "release", isEQ: false },
+{ label: "GRAVES (LOW)", offset: 0x24, chave: "eqLow", isEQ: true },
+{ label: "MÉDIOS (MID)", offset: 0x28, chave: "eqMid", isEQ: true },
+{ label: "AGUDOS (HIGH)", offset: 0x2C, chave: "eqHigh", isEQ: true }
+];
+const container = document.getElementById("modal-sliders-container");
+container.innerHTML = fxConfig.map(c => `
+<div class="fx-column">
+<span class="fx-label ${c.isEQ ? 'eq-lbl' : ''}">${c.label}</span>
+<div class="fx-slider-wrapper"><input type="range" class="fx-slider ${c.isEQ ? 'eq-slide' : ''}" id="mdl-${c.chave}" min="0" max="127"></div>
+<span class="fx-value" id="vmdl-${c.chave}">64</span>
+</div>`).join("");
+fxConfig.forEach(c => {
+const input = document.getElementById(`mdl-${c.chave}`); const disp = document.getElementById(`vmdl-${c.chave}`);
+input.addEventListener("input", (e) => {
+const v = parseInt(e.target.value); disp.innerText = v;
+canaisEstado[canalAtivoNoPopup][c.chave] = v; isDirty = true;
+if(c.isEQ) { enviarSysExEQ(canalAtivoNoPopup, c.offset, v); } else { enviarCC(canalAtivoNoPopup, c.cc, v); }
+});
+});
+const picker = document.getElementById("ch-color-picker");
+picker.innerHTML = stripColors.map(col => `<div class="color-dot" style="background:${col.value || '#888'}" title="${col.name}" onclick="selecionarCorCanal('${col.value}')"></div>`).join("");
+function abrirPopup(ch) {
+canalAtivoNoPopup = ch; const nomeCustomizado = canaisEstado[ch].label || `Canal ${ch + 1}`;
+document.getElementById("modal-ch-title").innerText = `Editar FX & EQ - ${nomeCustomizado.toUpperCase()}`;
+fxConfig.forEach(c => {
+const v = canaisEstado[ch][c.chave]; document.getElementById(`mdl-${c.chave}`).value = v;
+document.getElementById(`vmdl-${c.chave}`).innerText = v;
+});
+modal.classList.add("active");
+}
+function selecionarCorCanal(corValue) {
+canaisEstado[canalAtivoNoPopup].color = corValue; isDirty = true;
+const strip = document.getElementById(`strip-${canalAtivoNoPopup}`);
+strip.style.background = corValue || "";
+}
+function fecharPopup() { modal.classList.remove("active"); }
+function alternarTema() { document.body.classList.toggle("aluminium-theme"); }
+function atualizarListaCenas() {
+const select = document.getElementById("scene-select"); select.innerHTML = '<option value="">-- Mixagens --</option>';
+Object.keys(localStorage).forEach(key => { if(key.startsWith("xps_mix_")) { const option = document.createElement("option"); option.value = key; option.innerText = key.replace("xps_mix_", ""); select.appendChild(option); } });
+}
+function abrirModalSalvar() {
+const selectSalvar = document.getElementById("save-target-select"); selectSalvar.innerHTML = '<option value="_new_">Nova Mixagem...</option>';
+Object.keys(localStorage).forEach(key => { if(key.startsWith("xps_mix_")) { const option = document.createElement("option"); option.value = key; option.innerText = `Sobrescrever: ${key.replace("xps_mix_", "")}`; selectSalvar.appendChild(option); } });
+document.getElementById("save-custom-name").value = ""; gerenciarPromptNome();
+saveModal.classList.add("active");
+}
+function fecharModalSalvar() { saveModal.classList.remove("active"); }
+function gerenciarPromptNome() { const select = document.getElementById("save-target-select"); const blocoNome = document.getElementById("save-name-block"); blocoNome.style.display = (select.value === "_new_") ? "flex" : "none"; }
+function verificarAlteracoes() { if (isDirty) { return confirm("Você possui modificações não salvas. Deseja descartá-las?"); } return true; }
+function executarSalvamento() {
+const select = document.getElementById("save-target-select"); let nomeFinal = "";
+if (select.value === "_new_") {
+const nomeDigitado = document.getElementById("save-custom-name").value.trim(); if (!nomeDigitado) return alert("Por favor, digite um nome!");
+nomeFinal = `xps_mix_${nomeDigitado}`;
+} else { nomeFinal = select.value; }
+localStorage.setItem(nomeFinal, JSON.stringify(canaisEstado)); isDirty = false;
+atualizarListaCenas(); fecharModalSalvar();
+}
+function carregarCena() {
+  if (!verificarAlteracoes()) return;
+  const key = document.getElementById("scene-select").value; 
+  if(!key) return alert("Selecione uma mixagem!");
 
- // Paleta de gradientes para personalização visual das tiras de canais
- const stripColors = [
- { name: "Padrão", value: "" },
- { name: "Azul", value: "linear-gradient(180deg, #3498db, #2980b9)" },
- { name: "Vermelho", value: "linear-gradient(180deg, #e74c3c, #c0392b)" },
- { name: "Verde", value: "linear-gradient(180deg, #2ecc71, #27ae60)" },
- { name: "Amarelo", value: "linear-gradient(180deg, #f1c40f, #f39c12)" },
- { name: "Roxo", value: "linear-gradient(180deg, #9b59b6, #8e44ad)" }
- ];
+  const cenaSalva = JSON.parse(localStorage.getItem(key));
+  crossfadeIntervals.forEach(clearInterval); 
+  crossfadeIntervals = [];
 
- // Mapeamento dos controles de efeito (Midi CC e offsets SysEx)
- const fxConfig = [
- { label: "REVERB", cc: 91, chave: "reverb", isEQ: false },
- { label: "CUTOFF", cc: 74, chave: "cutoff", isEQ: false },
- { label: "RESONANCE", cc: 71, chave: "resonance", isEQ: false },
- { label: "ATTACK", cc: 73, KEY: "attack", chave: "attack", isEQ: false },
- { label: "RELEASE", cc: 72, chave: "release", isEQ: false },
- { label: "GRAVES (LOW)", offset: 0x24, chave: "eqLow", isEQ: true },
- { label: "MÉDIOS (MID)", offset: 0x28, chave: "eqMid", isEQ: true },
- { label: "AGUDOS (HIGH)", offset: 0x2C, chave: "eqHigh", isEQ: true }
- ];
+  isLoadingScene = true;
 
- // Cache dos seletores principais da DOM
- const statusBar = document.getElementById("status-bar");
- const modal = document.getElementById("fx-modal");
- const saveModal = document.getElementById("save-modal");
- const activityLed = document.getElementById("midi-activity-led");
- // ==========================================================================
- // 13. CONEXÃO MIDI, ENTRADA/SAÍDA E REQUISIÇÃO SYSEX (SINCRO BIDIRECIONAL)
- // ==========================================================================
- if (navigator.requestMIDIAccess) {
- navigator.requestMIDIAccess({ sysex: true }).then(access => {
- tentarConectarMIDI(access);
- 
- access.onstatechange = (event) => {
- const porta = event.port;
- if (porta.name.toLowerCase().includes("xps-10") || 
- porta.name.toLowerCase().includes("roland")) {
- if (porta.state === "connected") {
- tentarConectarMIDI(access);
- } else if (porta.state === "disconnected") {
- definirComoDesconectado();
- }
- }
- };
- }, () => {
- statusBar.innerText = "Erro MIDI (Sem SysEx)";
- statusBar.style.backgroundColor = "#eedddd";
- });
- }
+  for(let i = 0; i < 16; i++) {
+    const stateNova = cenaSalva[i]; 
+    const estadoAtual = canaisEstado[i];
 
- function tentarConectarMIDI(access) {
- let outAchado = false;
- let inAchado = false;
- for (let output of access.outputs.values()) {
- if (output.name.toLowerCase().includes("xps-10") || 
- output.name.toLowerCase().includes("roland")) {
- midiOutput = output;
- outAchado = true;
- break;
- }
- }
- for (let input of access.inputs.values()) {
- if (input.name.toLowerCase().includes("xps-10") || 
- input.name.toLowerCase().includes("roland")) {
- midiInput = input;
- midiInput.onmidimessage = tratarMensagemMidiRecebida;
- inAchado = true;
- break;
- }
- }
- if (outAchado && inAchado) {
- statusBar.innerText = "Conectado Bidirecional: " + midiOutput.name;
- statusBar.className = "connected";
- sincronizarMutesHardware();
- } else if (outAchado || inAchado) {
- statusBar.innerText = "Conexão MIDI Parcial";
- statusBar.className = "";
- } else {
- definirComoDesconectado();
- }
- }
+    estadoAtual.label = stateNova.label || ""; 
+    estadoAtual.color = stateNova.color || "";
+    estadoAtual.volume = stateNova.volume !== undefined ? stateNova.volume : 100;
+    estadoAtual.pan = stateNova.pan !== undefined ? stateNova.pan : 64;
+    estadoAtual.isMuted = !!stateNova.isMuted; 
+    estadoAtual.isSoloed = !!stateNova.isSoloed;
+    estadoAtual.isLinked = !!stateNova.isLinked;
+    
+    fxConfig.forEach(c => {
+      estadoAtual[c.chave] = stateNova[c.chave] !== undefined ? stateNova[c.chave] : 64;
+    });
 
- function definirComoDesconectado() {
- midiOutput = null;
- midiInput = null;
- statusBar.innerText = "Aguardando MIDI...";
- statusBar.className = "";
- }
+    const nameInput = document.getElementById(`name-in-${i}`);
+    nameInput.value = estadoAtual.label;
+    nameInput.placeholder = estadoAtual.label ? "" : `CH ${i + 1}`;
+    
+    document.getElementById(`strip-${i}`).style.background = estadoAtual.color || "";
+    document.getElementById(`mute-${i}`).classList.toggle("active", estadoAtual.isMuted);
+    document.getElementById(`strip-${i}`).classList.toggle("muted", estadoAtual.isMuted);
+    document.getElementById(`solo-${i}`).classList.toggle("active", estadoAtual.isSoloed);
+    
+    if(i < 15) {
+      document.getElementById(`lnk-${i}`).classList.toggle("active", estadoAtual.isLinked);
+      document.getElementById(`strip-${i}`).classList.toggle("linked-next", estadoAtual.isLinked);
+    }
 
- function blinkLed() {
- activityLed.classList.add("blink");
- setTimeout(() => activityLed.classList.remove("blink"), 45);
- }
+    document.getElementById(`fad-${i}`).value = estadoAtual.volume;
+    document.getElementById(`vdisp-${i}`).innerText = estadoAtual.volume;
+    atualizarVUMeter(i, estadoAtual.volume);
 
- function enviarCC(canal, cc, valor) {
- if (midiOutput) { 
- midiOutput.send([0xB0 + canal, cc, valor]); 
- blinkLed(); 
- }
- }
+    document.getElementById(`pan-${i}`).value = estadoAtual.pan;
+    const dispPan = document.getElementById(`pdisp-${i}`);
+    if(estadoAtual.pan === 64) dispPan.innerText = "C";
+    else if(estadoAtual.pan < 64) dispPan.innerText = "L" + Math.round(((64-estadoAtual.pan)/64)*100);
+    else dispPan.innerText = "R" + Math.round(((estadoAtual.pan-64)/64)*100);
 
- function enviarSysExRoland(addrH, addrM1, addrM2, addrL, valor) {
- if (!midiOutput) return;
- let somaBytes = addrH + addrM1 + addrM2 + addrL + valor;
- let checksum = 128 - (somaBytes % 128);
- if (checksum === 128) checksum = 0;
- midiOutput.send([
- 0xF0, 0x41, 0x10, 0x00, 0x00, 0x6A, 0x12,
- addrH, addrM1, addrM2, addrL, valor, checksum, 0xF7
- ]);
- blinkLed();
- }
- function solicitarPerformanceHardware() {
- if (!midiOutput) return alert("Conecte o XPS-10 para receber a Performance!");
- statusBar.innerText = "Lendo Performance do Hardware...";
- 
- const addrH = 0x10, addrM1 = 0x00, addrM2 = 0x00, addrL = 0x00;
- const sizeH = 0x00, sizeM1 = 0x00, sizeM2 = 0x01, sizeL = 0x00;
- 
- let soma = addrH + addrM1 + addrM2 + addrL + sizeH + sizeM1 + sizeM2 + sizeL;
- let checksum = 128 - (soma % 128);
- if (checksum === 128) checksum = 0;
- midiOutput.send([
- 0xF0, 0x41, 0x10, 0x00, 0x00, 0x6A, 0x11,
- addrH, addrM1, addrM2, addrL,
- sizeH, sizeM1, sizeM2, sizeL,
- checksum, 0xF7
- ]);
- blinkLed();
- }
+    if (estadoAtual.isMuted || verificarBloqueioSolo(i)) { 
+      enviarCC(i, 7, 0); 
+    } else { 
+      enviarCC(i, 7, estadoAtual.volume); 
+    }
+    enviarCC(i, 10, estadoAtual.pan);
 
- function tratarMensagemMidiRecebida(event) {
- const dados = event.data;
- if (!dados || dados[0] !== 0xF0) return;
- 
- if (dados[1] === 0x41 && dados[6] === 0x12) {
- blinkLed();
- const addrH = dados[7];
- const addrM1 = dados[8];
- const addrM2 = dados[9];
- const addrL = dados[10];
- const valorRecebido = dados[11];
- 
- if (addrH === 0x10 && addrM1 === 0x00 && (addrM2 >= 0x20 && addrM2 <= 0x2F)) {
- const canalPart = addrM2 - 0x20;
- const parametroOffset = addrL;
- sincronizarDadoHardwareParaSoftware(canalPart, parametroOffset, valorRecebido);
- }
- }
- }
+    fxConfig.forEach(c => {
+      if(c.isEQ) {
+        enviarSysExEQ(i, c.offset, estadoAtual[c.chave]); 
+      } else {
+        enviarCC(i, c.cc, estadoAtual[c.chave]);
+      }
+    });
+  }
 
- function sincronizarDadoHardwareParaSoftware(canal, offset, valor) {
- if (offset === 0x02) {
- const isMuted = (valor === 0);
- canaisEstado[canal].isMuted = isMuted;
- document.getElementById(`mute-${canal}`).classList.toggle("active", isMuted);
- document.getElementById(`strip-${canal}`).classList.toggle("muted", isMuted);
- } else if (offset === 0x1A) {
- canaisEstado[canal].volume = valor;
- document.getElementById(`fad-${canal}`).value = valor;
- document.getElementById(`vdisp-${canal}`).innerText = valor;
- atualizarVUMeter(canal, valor);
- } else if (offset === 0x1C) {
- canaisEstado[canal].pan = valor;
- document.getElementById(`pan-${canal}`).value = valor;
- const disp = document.getElementById(`pdisp-${canal}`);
- if(valor === 64) disp.innerText = "C";
- else if(valor < 64) disp.innerText = "L" + Math.round(((64 - valor)/64)*100);
- else disp.innerText = "R" + Math.round(((valor - 64)/64)*100);
- }
- statusBar.innerText = `Sincronizado: CH ${canal + 1} Atualizado`;
- }
+  isDirty = false;
 
- function enviarSysExEQ(canal, parametroOffset, valor) {
- enviarSysExRoland(0x18, 0x00, 0x20 + canal, parametroOffset, valor);
- }
-
- function enviarSysExPartSwitch(canal, ligado) {
- const valorMidi = ligado ? 1 : 0;
- enviarSysExRoland(0x18, 0x00, 0x20 + canal, 0x02, valorMidi);
- }
-
- function sincronizarMutesHardware() {
- if (!midiOutput) return;
- for (let i = 0; i < 16; i++) {
- enviarSysExPartSwitch(i, !canaisEstado[i].isMuted);
- }
- }
- // ==========================================================================
- // 14. MOTOR VISUAL - GERADOR DINÂMICO DE CHASSIS DE MIXAGEM (UI RENDERER)
- // ==========================================================================
- const mixer = document.getElementById("mixer");
- 
- function inicializarConsoleCanais() {
- mixer.innerHTML = ""; // Limpa para rebuild seguro
- for (let i = 0; i < 16; i++) {
- const ch = i;
- const strip = document.createElement("div");
- strip.className = "channel-strip";
- strip.id = `strip-${ch}`;
- 
- // Injeção de Template Semântico no DOM
- strip.innerHTML = `
- <div class="strip-header-controls">
- <input type="text" class="channel-name-input" id="name-in-${ch}" 
-placeholder="CH ${ch + 1}" maxlength="12">
- </div>
- <div class="pan-container">
- <span class="pan-label" id="pdisp-${ch}">C</span>
- <input type="range" class="pan-input" id="pan-${ch}" min="0" max="127" 
-value="64">
- </div>
- ${ch < 15 ? `<button class="link-row-btn" id="lnk-${ch}" 
-onclick="toggleLink(${ch})">LINK STEREO</button>` : '<div style="height:23px;"></div>'}
- <div class="fader-layout-box">
- <div class="vu-meter" id="vu-${ch}">
- ${Array.from({ length: 15 }, (_, idx) => `<div class="vu-segment ${idx < 2 ? 'red' : 
-idx < 5 ? 'yellow' : 'green'}"></div>`).join("")}
- </div>
- <div class="fader-wrapper">
- <input type="range" class="fader-input" id="fad-${ch}" min="0" max="127" 
-value="100">
- </div>
- </div>
- <div class="volume-display" id="vdisp-${ch}">100</div>
- <div class="btn-group">
- <button class="fx-btn" onclick="abrirPopup(${ch})">FX</button>
- <button class="solo-btn" id="solo-${ch}" onclick="toggleSolo(${ch})">S</button>
- <button class="mute-btn" id="mute-${ch}" 
-onclick="toggleMute(${ch})">M</button>
- </div>
- `;
- 
- mixer.appendChild(strip);
- atualizarVUMeter(ch, 100);
- // Vinculação de escutas de eventos (Listeners) nativas por canal
- document.getElementById(`fad-${ch}`).addEventListener("input", (e) => 
-moverFaderManual(ch, parseInt(e.target.value)));
- document.getElementById(`pan-${ch}`).addEventListener("input", (e) => 
-moverPanManual(ch, parseInt(e.target.value)));
- document.getElementById(`name-in-${ch}`).addEventListener("input", (e) => {
- canaisEstado[ch].label = e.target.value;
- isDirty = true;
- });
- }
- }
-
- function atualizarVUMeter(ch, volume) {
- const segments = document.querySelectorAll(`#vu-${ch} .vu-segment`);
- const activeCount = Math.ceil((volume / 127) * 15);
- segments.forEach((seg, idx) => {
- const invertedIndex = 14 - idx;
- if (invertedIndex < activeCount) { 
- seg.classList.add("active"); 
- } else { 
- seg.classList.remove("active"); 
- }
- });
- }
- // ==========================================================================
- // 15. ENGENHARIA DE CONTROLE DOS CANAIS (VOLUME, PAN, MUTE, SOLO & LINK)
- // ==========================================================================
- const masterFader = document.getElementById("master-fader");
- const masterVal = document.getElementById("master-val");
- 
- masterFader.addEventListener("input", (e) => {
- const v = parseInt(e.target.value); 
- masterVal.innerText = v;
- for(let i = 0; i < 16; i++) {
- enviarCC(i, 11, v); // Atenuador Expression global
- }
- });
-
- function moverFaderManual(ch, vol) {
- modificarVolumeEstado(ch, vol);
- if (canaisEstado[ch].isLinked && ch < 15) {
- modificarVolumeEstado(ch + 1, vol);
- document.getElementById(`fad-${ch + 1}`).value = vol;
- } else if (ch > 0 && canaisEstado[ch - 1].isLinked) {
- modificarVolumeEstado(ch - 1, vol);
- document.getElementById(`fad-${ch - 1}`).value = vol;
- }
- }
-
- function modificarVolumeEstado(ch, vol) {
- document.getElementById(`vdisp-${ch}`).innerText = vol;
- canaisEstado[ch].volume = vol; 
- isDirty = true;
- atualizarVUMeter(ch, vol);
- 
- if (!canaisEstado[ch].isMuted && !verificarBloqueioSolo(ch)) {
- enviarCC(ch, 7, vol);
- }
- }
-
- function moverPanManual(ch, pVal) {
- modificarPanEstado(ch, pVal);
- if (canaisEstado[ch].isLinked && ch < 15) {
- let pInvertido = 127 - pVal;
- modificarPanEstado(ch + 1, pInvertido);
- document.getElementById(`pan-${ch + 1}`).value = pInvertido;
- }
- }
-
- function modificarPanEstado(ch, pVal) {
- canaisEstado[ch].pan = pVal; 
- isDirty = true;
- const disp = document.getElementById(`pdisp-${ch}`);
- 
- if(pVal === 64) {
- disp.innerText = "C";
- } else if(pVal < 64) {
- disp.innerText = "L" + Math.round(((64 - pVal) / 64) * 100);
- } else {
- disp.innerText = "R" + Math.round(((pVal - 64) / 64) * 100);
- }
- enviarCC(ch, 10, pVal);
- }
-
- function toggleLink(ch) {
- canaisEstado[ch].isLinked = !canaisEstado[ch].isLinked; 
- isDirty = true;
- const btn = document.getElementById(`lnk-${ch}`);
- const strip = document.getElementById(`strip-${ch}`);
- 
- if(canaisEstado[ch].isLinked) {
- btn.classList.add("active"); 
- strip.classList.add("linked-next");
- moverFaderManual(ch, canaisEstado[ch].volume);
- } else {
- btn.classList.remove("active"); 
- strip.classList.remove("linked-next");
- }
- }
-
- function toggleMute(ch) {
- const estado = canaisEstado[ch]; 
- const btn = document.getElementById(`mute-${ch}`); 
- const strip = document.getElementById(`strip-${ch}`);
- 
- estado.isMuted = !estado.isMuted; 
- isDirty = true;
- 
- if (estado.isMuted) { 
- btn.classList.add("active"); 
- strip.classList.add("muted"); 
- enviarSysExPartSwitch(ch, false);
- } else { 
- btn.classList.remove("active"); 
- strip.classList.remove("muted");
- if(!verificarBloqueioSolo(ch)) {
- enviarSysExPartSwitch(ch, true);
- enviarCC(ch, 7, estado.volume);
- } 
- }
- }
-
- function toggleSolo(ch) {
- canaisEstado[ch].isSoloed = !canaisEstado[ch].isSoloed; 
- isDirty = true;
- document.getElementById(`solo-${ch}`).classList.toggle("active", canaisEstado[ch].isSoloed);
- atualizarFadersPorRegraSoloMute();
- }
-
- function verificarBloqueioSolo(ch) {
- const algumSoloAtivo = canaisEstado.some(c => c.isSoloed);
- if (algumSoloAtivo && !canaisEstado[ch].isSoloed) return true;
- return false;
- }
-
- function atualizarFadersPorRegraSoloMute() {
- for(let i = 0; i < 16; i++) {
- const estado = canaisEstado[i];
- if (estado.isMuted || verificarBloqueioSolo(i)) { 
- enviarSysExPartSwitch(i, false); 
- } else { 
- enviarSysExPartSwitch(i, true);
- enviarCC(i, 7, estado.volume);
- }
- }
- }
-
- function toggleMuteGroup(group) {
- const btn = document.getElementById(`mg${group}`); 
- const active = btn.classList.toggle("active");
- const start = group === 1 ? 0 : 8; 
- const end = group === 1 ? 8 : 16;
- 
- for (let i = start; i < end; i++) { 
- if (canaisEstado[i].isMuted !== active) toggleMute(i); 
- }
- }
- // ==========================================================================
- // 16. CONTROLADOR DE INTERFACE MODAL E NAVEGAÇÃO ENTRE ABAS (TABS)
- // ==========================================================================
- function switchTab(tabName) {
- document.getElementById("tab-fx-btn").classList.remove("active");
- document.getElementById("tab-patch-btn").classList.remove("active");
- document.getElementById("tab-fx-content").classList.remove("active");
- document.getElementById("tab-patch-content").classList.remove("active");
- 
- if (tabName === 'fx') {
- document.getElementById("tab-fx-btn").classList.add("active");
- document.getElementById("tab-fx-content").classList.add("active");
- } else if (tabName === 'patch') {
- document.getElementById("tab-patch-btn").classList.add("active");
- document.getElementById("tab-patch-content").classList.add("active");
- // Sincroniza os seletores de timbres apenas quando o container HTML está ativo
- sincronizarCamposTimbre();
- }
- }
-
- // ==========================================================================
- // 17. INJEÇÃO DINÂMICA DE FX/EQ E CONTROLES GERAIS
- // ==========================================================================
- const containerSliders = document.getElementById("modal-sliders-container");
- containerSliders.innerHTML = fxConfig.map(c => `
- <div class="fx-column">
- <span class="fx-label ${c.isEQ ? 'eq-lbl' : ''}">${c.label}</span>
- <div class="fx-slider-wrapper">
- <input type="range" class="fx-slider ${c.isEQ ? 'eq-slide' : ''}" id="mdl-${c.chave}" 
- min="0" max="127">
- </div>
- <span class="fx-value" id="vmdl-${c.chave}">64</span>
- </div>
- `).join("");
-
- fxConfig.forEach(c => {
- const input = document.getElementById(`mdl-${c.chave}`);
- const disp = document.getElementById(`vmdl-${c.chave}`);
- 
- input.addEventListener("input", (e) => {
- const v = parseInt(e.target.value); 
- disp.innerText = v;
- canaisEstado[canalAtivoNoPopup][c.chave] = v; 
- isDirty = true;
- 
- if(c.isEQ) { 
- enviarSysExEQ(canalAtivoNoPopup, c.offset, v); 
- } else {
- enviarCC(canalAtivoNoPopup, c.cc, v); 
- }
- });
- });
-
- const picker = document.getElementById("ch-color-picker");
- picker.innerHTML = stripColors.map(col => `
- <div class="color-dot" style="background:${col.value || '#888'}" title="${col.name}" 
- onclick="selecionarCorCanal('${col.value}')"></div>
- `).join("");
-
- function abrirPopup(ch) {
- canalAtivoNoPopup = ch;
- const nomeCustomizado = canaisEstado[ch].label || `Canal ${ch + 1}`;
- document.getElementById("modal-ch-title").innerText = `Editar - ${nomeCustomizado.toUpperCase()}`;
- 
- fxConfig.forEach(c => {
- const v = canaisEstado[ch][c.chave]; 
- document.getElementById(`mdl-${c.chave}`).value = v;
- document.getElementById(`vmdl-${c.chave}`).innerText = v;
- });
-
- // Abre o modal redefinindo o foco na primeira aba de efeitos
- switchTab('fx');
- 
- // Monta as categorias de bancos de forma limpa
- popularSelectBancos();
- 
- modal.classList.add("active");
- }
-
- function fecharPopup() {
- modal.classList.remove("active");
- }
- function popularSelectBancos() {
- const selectBanco = document.getElementById("patch-bank");
- if (!selectBanco) return;
- 
- // CORREÇÃO: Alterado de .nome para .categoria para ler direto do JSON do XPS10
- selectBanco.innerHTML = RO_BANCOS_XPS10.map((banco, idx) => `
- <option value="${idx}">${banco.categoria} [MSB:${banco.msb} LSB:${banco.lsb}]</option>
- `).join("");
- }
-
- function sincronizarCamposTimbre() {
- const estadoCanal = canaisEstado[canalAtivoNoPopup];
- const selectBanco = document.getElementById("patch-bank");
- const selectProgram = document.getElementById("patch-program");
- if (!selectBanco || !selectProgram || !estadoCanal) return;
-
- // 1. Define o índice do banco previamente salvo na memória do canal ativo
- selectBanco.value = estadoCanal.bankIndex;
- 
- // 2. Monta a lista HTML de timbres (patches) correspondente a esse banco
- atualizarSelectTimbres();
- 
- // 3. Aplica o timbre (PC) que estava guardado na memória
- selectProgram.value = estadoCanal.patchPC;
- }
-
- function atualizarSelectTimbres() {
- const selectBanco = document.getElementById("patch-bank");
- if (!selectBanco || RO_BANCOS_XPS10.length === 0) return;
- 
- const bankIdx = parseInt(selectBanco.value) || 0;
- 
- // Sincroniza a mudança de banco feita pelo usuário na tela para a memória
- if (canaisEstado[canalAtivoNoPopup]) {
- canaisEstado[canalAtivoNoPopup].bankIndex = bankIdx;
- }
- 
- const selectProgram = document.getElementById("patch-program");
- const bancoSelecionado = RO_BANCOS_XPS10[bankIdx];
-
- if (bancoSelecionado && selectProgram) {
- selectProgram.innerHTML = bancoSelecionado.timbres.map(t => `
- <option value="${t.pc}">${t.nome}</option>
- `).join("");
- 
- // Caso o usuário mude de banco, define o Program Change inicial da nova lista
- const pcVal = parseInt(selectProgram.value) || 1;
- canaisEstado[canalAtivoNoPopup].patchPC = pcVal;
- }
- }
-
- function enviarMudancaTimbre() {
- const bankIdx = parseInt(document.getElementById("patch-bank").value) || 0;
- const pcVal = parseInt(document.getElementById("patch-program").value) || 1;
- 
- canaisEstado[canalAtivoNoPopup].bankIndex = bankIdx;
- canaisEstado[canalAtivoNoPopup].patchPC = pcVal;
- isDirty = true;
-
- const bancoRoland = RO_BANCOS_XPS10[bankIdx];
- if (!bancoRoland) return;
-
- enviarCC(canalAtivoNoPopup, 0, bancoRoland.msb);
- enviarCC(canalAtivoNoPopup, 32, bancoRoland.lsb);
- 
- if (midiOutput) {
- midiOutput.send([0xC0 + canalAtivoNoPopup, pcVal - 1]);
- blinkLed();
- }
- }
-
- // Simulações CRUD de Cenas para manter compatibilidade estrutural
- function carregarCena() {}
- function abrirModalSalvar() {}
- function fecharModalSalvar() {}
- function deletarCena() {}
- function gerenciarPromptNome() {}
- function executarSalvamento() {}
- 
- function selecionarCorCanal(cor) {
- const strip = document.getElementById(`strip-${canalAtivoNoPopup}`);
- if(strip) {
- strip.style.background = cor;
- canaisEstado[canalAtivoNoPopup].color = cor;
- isDirty = true;
- }
- }
-
- // Inicialização automática da Viewport de áudio
- window.onload = () => {
- if (RO_BANCOS_XPS10.length === 0) {
-   console.warn("Nenhum banco de timbres foi carregado.");
- }
- inicializarConsoleCanais();
- };
- 
- if ('serviceWorker' in navigator) {
-   window.addEventListener('load', () => {
-     navigator.serviceWorker.register('./sw.js').catch((error) => {
-       console.warn('Falha ao registrar o service worker:', error);
-     });
-   });
- }
- </script>
+  setTimeout(() => {
+    isLoadingScene = false;
+  }, 250);
+}
+function deletarCena() {
+const key = document.getElementById("scene-select").value; if(!key) return alert("Selecione uma mixagem!");
+if(confirm("Deseja realmente excluir esta mixagem?")) { localStorage.removeItem(key); isDirty = false; atualizarListaCenas(); }
+}
+function exportarBackup() {
+const backupData = {}; Object.keys(localStorage).forEach(key => { if(key.startsWith("xps_mix_")) backupData[key] = JSON.parse(localStorage.getItem(key)); });
+const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: "application/json" });
+const url = URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = "backup_mixer_xps10.json"; a.click(); URL.revokeObjectURL(url);
+}
+function importarBackup(event) {
+const file = event.target.files[0]; if (!file) return;
+const reader = new FileReader();
+reader.onload = function(e) {
+try {
+const importedData = JSON.parse(e.target.result); Object.keys(importedData).forEach(key => { if(key.startsWith("xps_mix_")) localStorage.setItem(key, JSON.stringify(importedData[key])); });
+alert("Mixagens importadas!"); atualizarListaCenas();
+} catch (err) { alert("Erro no arquivo de backup."); }
+};
+reader.readAsText(file);
+}
+atualizarListaCenas();
+if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('./sw.js').then(reg => console.log('Service Worker registrado com sucesso:', reg.scope)).catch(err => console.error('Falha ao registrar o Service Worker:', err)); }); }
+</script>
 </body>
 </html>

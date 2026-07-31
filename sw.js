@@ -1,81 +1,86 @@
-// ==========================================================================
-// PWA SERVICE WORKER - MOTOR DE CACHE OFFLINE E PRE-RENDERING (Vsouza)
-// ==========================================================================
+const CACHE_NAME = 'xps10-pwa-v1';
 
-// Identificador único da versão do cache (atualize se modificar a interface)
-const NOME_CACHE = 'xps10-mixer-v2';
-
-// Lista de arquivos vitais que serão instalados localmente na memória do tablet
-const ARQUIVOS_ESTATICOS = [
-    './',
-    './index.html',
-    './manifest.json',
-    './icons/icon-1024.png'
+// Cache lista explícita (tudo que o app precisa para carregar sem rede)
+const ASSETS = [
+  './',
+  './index.html',
+  './manifest.json',
+  './sw.js',
+  './icons/icon-1024.png'
 ];
 
-/**
- * Evento de Instalação (INSTALL)
- * É disparado assim que o app é reconhecido. Baixa e armazena os arquivos no cache de disco.
- */
-self.addEventListener('install', (evento) => {
-    evento.waitUntil(
-        caches.open(NOME_CACHE).then((cache) => {
-            console.log('PWA: Gravando arquivos estáticos no cache local de armazenamento...');
-            return cache.addAll(ARQUIVOS_ESTATICOS);
-        }).then(() => self.skipWaiting()) // Força o Service Worker a se tornar ativo imediatamente
-    );
+// Install event - cache assets
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
+  );
+  self.skipWaiting();
 });
 
-/**
- * Evento de Ativação (ACTIVATE)
- * Limpa caches antigos de versões anteriores para evitar bugs de layout ou scripts velhos.
- */
-self.addEventListener('activate', (evento) => {
-    evento.waitUntil(
-        caches.keys().then((chavesCache) => {
-            return Promise.all(
-                chavesCache.map((chave) => {
-                    if (chave !== NOME_CACHE) {
-                        console.log('PWA: Removendo cache antigo obsoleto:', chave);
-                        return caches.delete(chave);
-                    }
-                })
-            );
-        }).then(() => self.clients.claim()) // Assume o controle da página imediatamente
-    );
-});
-
-/**
- * Evento de Interceptação de Rede (FETCH)
- * Intercepta as requisições do app. Se o arquivo estiver no cache do tablet, carrega do disco.
- * Se não estiver (ou se falhar), tenta buscar na rede HTTP.
- */
-self.addEventListener('fetch', (evento) => {
-    if (evento.request.method !== 'GET') return;
-
-    evento.respondWith(
-        caches.match(evento.request).then((respostaArmazenada) => {
-            if (respostaArmazenada) {
-                return respostaArmazenada;
-            }
-
-            return fetch(evento.request).then((respostaRede) => {
-                if (!respostaRede || respostaRede.status !== 200 || !['basic', 'cors'].includes(respostaRede.type)) {
-                    return respostaRede;
-                }
-
-                const respostaParaCache = respostaRede.clone();
-                caches.open(NOME_CACHE).then((cache) => {
-                    cache.put(evento.request, respostaParaCache);
-                });
-
-                return respostaRede;
-            }).catch(() => {
-                if (evento.request.mode === 'navigate') {
-                    return caches.match('./index.html');
-                }
-                console.log('PWA: Dispositivo sem conectividade. Rodando em modo 100% isolado.');
-            });
+// Activate event - clean old caches
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) return caches.delete(cacheName);
+          return Promise.resolve();
         })
-    );
+      );
+    })
+  );
+  self.clients.claim();
 });
+
+// Fetch event
+self.addEventListener('fetch', event => {
+  // GET only (não cachear requests POST etc.)
+  if (event.request.method !== 'GET') return;
+
+  const req = event.request;
+  const url = new URL(req.url);
+
+  // Para navegação (index.html e rotas), usar cache-first melhora MUITO o offline
+  const isNavigateRequest = req.mode === 'navigate' || url.pathname === '/' || url.pathname.endsWith('/index.html');
+
+  if (isNavigateRequest) {
+    event.respondWith(
+      caches.match('./index.html')
+        .then(cached => {
+          // se tiver no cache, retorna imediatamente (offline friendly)
+          if (cached) return cached;
+          // senão tenta rede e salva no cache
+          return fetch(req).then(response => {
+            if (!response || !response.ok) return response;
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put('./index.html', responseClone));
+            return response;
+          });
+        })
+        .catch(() => caches.match('./index.html'))
+    );
+    return;
+  }
+
+  // Para o resto: network-first com fallback
+  event.respondWith(
+    fetch(req)
+      .then(response => {
+        // Apenas recursos http(s)
+        if (!response || !response.ok) return response;
+
+        const responseClone = response.clone();
+        caches.open(CACHE_NAME).then(cache => {
+          cache.put(req, responseClone);
+        });
+
+        return response;
+      })
+      .catch(() => {
+        // fallback para cache
+        return caches.match(req).then(cached => cached || caches.match('./index.html'));
+      })
+  );
+});
+
+

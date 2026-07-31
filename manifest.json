@@ -1,27 +1,20 @@
 {
-  "name": "XPS-10 Pro Mixer & Performance Manager",
-  "short_name": "XPS10 Editor",
-  "description": "Software profissional de controle de pistas, equalização e seleção de timbres para o Roland XPS-10 via Web MIDI API.",
-  "id": "./",
-  "scope": "./",
+  "name": "Xps 10 OTG",
+  "short_name": "Xps 10 OTG",
+  "description": "Professional 16-channel mixer with effects and EQ for XPS-10",
   "start_url": "./index.html",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone"],
-  "orientation": "landscape",
-  "background_color": "#e1e4e6",
+  "background_color": "#070709",
   "theme_color": "#007aff",
+  "orientation": "landscape",
   "icons": [
     {
       "src": "./icons/icon-1024.png",
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any maskable"
-    },
-    {
-      "src": "./icons/icon-1024.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
     }
-  ]
+  ],
+  "categories": ["music", "audio", "utilities"]
 }
+
